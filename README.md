@@ -4,7 +4,7 @@
 - [About](#About)
 - [Examples of Use Cases](#Examples-of-Use-Cases)
 - [Installation](#Installation)
-- [Global News Kristina](#Global-News-Kristina)
+- [Kristina](#Kristina)
 - [Twitter Sadaf](#Twitter-Sadaf)
 - [Facebook Yifei](#Facebook-Yifei)
 - [Reddit Yifei](#Reddit-Yifei)
