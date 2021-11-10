@@ -107,9 +107,9 @@ $ git push origin branch-name
 ```
 Merge the branch:
 ```shell script
-git merge branch-name
-git branch
-git push origin main
+$ git merge branch-name
+$ git branch
+$ git push origin main
 ```
 
 ## AWS Reference
