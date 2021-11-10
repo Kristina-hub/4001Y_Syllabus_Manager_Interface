@@ -54,19 +54,18 @@ Members of my group that do not want to code will be in charge of testing and ad
 The advertiser will make sure Integrated Science students as well as other Western students know about this website, they will come up with a plan to make this widely known and widely used.
 
 ## Steps
-1.	Use Slack for communication
-2.	Meet once a week every Wednesday at 2:30pm over Zoom
-3.	Create a UML diagram to plan out all of the classes and organization of the code
-4.	Draw a picture of what we would like the website to look like
-5.	Use Python and GitHub to create the website locally
-6.	Use AWS to host the website externally
-7.	Presentation of the website during an in-person visit of the 1001X class
-8.	Ask WiSc students for feedback on how to change the website
-9.	Ask Felix to send an e-mail to all WiSc Students with the link to the website 
-10.	Post link to WiSc Facebook group chat
-11.	Post link to the private Facebook group called Western Integrated Science
-12.	Post link to the public Facebook group called " "Must Knows" for courses at UWO
-13.	Post link to LinkedIn to reach a wider audience
+1.	Use Slack for communication and meet once a week every Wednesday at 2:30pm over Zoom
+2.	Create a UML diagram to plan out all of the classes and organization of the code
+3.	Draw a picture of what we would like the website to look like
+4.	Use Python and GitHub to create the website locally
+5.	Use AWS to host the website externally
+6.	Presentation of the website during an in-person visit of the 1001X class
+7.	Ask WiSc students for feedback on how to change the website
+8.	Ask Felix to send an e-mail to all WiSc Students with the link to the website 
+9.	Post link to WiSc Facebook group chat
+10.	Post link to the private Facebook group called Western Integrated Science
+11.	Post link to the public Facebook group called " "Must Knows" for courses at UWO
+12.	Post link to LinkedIn to reach a wider audience
 
 ## Deliverables
 1.	UML diagram 
