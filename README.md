@@ -108,7 +108,7 @@ $ git checkout main
 $ git branch
 $ git push origin branch-name
 ```
-Merge the branch:
+#### Merge the branch
 ```shell script
 $ git merge branch-name
 $ git branch
