@@ -1,89 +1,164 @@
 # 4001Y_Syllabus_Manager_Interface
 
-### Table of Contents
+## Table of Contents
 - [About](#About)
-- [Examples of Use Cases](#Examples-of-Use-Cases)
+- [Tentative Goals](#Tentative-Goals)
+- [Anticipated Impact](#Anticipated-Impact)
+- [Possible Action Plan](#Possible-Action-Plan)
 - [Installation](#Installation)
 - [Kristina](#Kristina)
-- [Twitter Sadaf](#Twitter-Sadaf)
-- [Facebook Yifei](#Facebook-Yifei)
-- [Reddit Yifei](#Reddit-Yifei)
-- [Integration](#Integration)
-
+- [Miranda](#Miranda)
+- [Winston](#Winston)
+- [Demo](#Demo)
+- [Git Reference](#Git-Reference)
+- [AWS Reference](#AWS-Reference)
 
 ## About
-Build a product that focuses on predicting market-moving events before they become widely available on news sites (such as Thomson Reuters, Associate Press) that can be utilized by Citi market traders.
+Miranda and I were discussing how much time it takes for both of us to read through our course outlines and manually add assignment deadlines one by one into our calendars. We want to make a program that automates this process for us.
 
-## Examples of Use Cases
+## Tentative Goals
+1. Create a website / app for the syllabus manager
+2. Get students to test and rate initial versions
+3. Advertise the final product
 
-1. Considers social media (e.g. Twitter, Facebook) and other types (e.g. Global News, Stock News)
-2. Uses fast and slow media types to detect macro-trends so that we can assess the impact on various portfolios
-3. Groups events in a trend based on how this will affect the markets and individual asset classes
-4. Builds a product that could help us evaluate potential “macro trends” and their impact on stocks
+## Anticipated Impact
+By making it easier for students to put deadlines from their syllabus into their calendars, we hope to incentivize better time management.
+
+## Possible Action Plan
+Miranda and I are taking the same project course CS3307 where we have teamed up with 3 other computer science majors to code a C++ program capable of scanning course outlines and outputting assignment deadlines to a csv file. 
+In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. Members of my group that do not want to code will be in charge of testing and advertising. The tester will get hundreds of students on Western Campus to test our software and rate their experience. The advertiser will make sure Integrated Science students as well as other Western students know about this website, they will come up with a plan to make this widely known and widely used.
 
 ## Installation
-
 ```shell script
-$ pip install newsapi-python
-$ pip install tweepy
-$ pip install praw
-$ pip install facebook_scraper
-
+$ pip3 install -r requirements.txt
 ```
 
-```shell script
-$ pip install flask
-$ pip install textblob
-$ pip install -U scikit-learn
-
-```
-
-```shell script
-$ pip install nltk
-$ python
-$ import nltk
-$ nltk.download('punkt')
-$ nltk.download('wordnet')
-$ nltk.download('averaged_perceptron_tagger')
-$ nltk.download('twitter_samples')
-$ nltk.download('stopwords')
-
-```
-## Notice
-The repository contains large files, please use following command to pull
-```
-git-lfs pull
-```
 ## Kristina
-  - User is prompted to input the name and category of the stock they want to purchase
-  - An API gets the most recent news articles related to this stock
-  - A classifier was trained with positive tweets and negative tweets to identify positive and negative words
-  - The news articles are parsed into tokens and scanned for positive or negative connotations
-  - If the majority of words relating to the stock are positive, the output recommends to buy the stock
-  - If the majority of words relating to the stock are negative, the output recommends to not buy the stock
-
+  - Worked on...
+  
 ## Miranda
-  - User is prompted to input the name of the stock they want to purchase
-  - An API gets the most recent 1000 tweets related to this stock
-  - Used VADER (Valence Aware Dictionary and Sentiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media
-  - Cleaned tokens, trained model and performed semantic analysis
-  - VADER provides a compound score, it is a metric that calculates the sum of all the lexicon ratings which have been normalized between -1(most extreme negative) and +1 (most extreme positive).
-    positive sentiment : (compound score >= 0.05)
-    neutral sentiment : (compound score > -0.05) and (compound score < 0.05)
-    negative sentiment : (compound score <= -0.05)
-  - The tweets are parsed into tokens and scanned for positive or negative connotations
-  - If the majority of words relating to the stock are positive, the output recommends to buy the stock
-  - If the majority of words relating to the stock are negative, the output recommends to not buy the stock
+  - Worked on...
   
 ## Winston
-  - Used a facebook scraper to collect posts data from public stock related groups
-  - Combining Sklearn and NLTK classifieres to imporve the accuracy
-  - Classifieres were trained with short movie reviews to identify positive and negative words
-  - The trained classifiers are saved as ['\*.pickle'] files under [yifei_facebook/algo_pickle] folder
-  - The data collected from facebook are parsed into cleaned tokens and performed senmantic analysis
-
-### Demo
+  - Worked on...
+  
+## Demo
   ![](kristina_global_news/demos/global_news_demo.gif)
 
-### Tools
-  - Used NewsAPI https://newsapi.org/ because the free version allows 100 requests per day
+## Git Reference
+
+### Setting up Git Repo
+Add to your config file:
+```shell script
+$ touch ~/.ssh/config
+$ open ~/.ssh/config
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+```
+Create an ssh key:
+```shell script
+$ ssh-keygen -t ed25519 -C "email@gmail.com"
+$ ssh-add -K ~/.ssh/id_ed25519
+$ pbcopy < ~/.ssh/id_ed25519.pub
+```
+Go to GitHub -> Settings -> SSH and GPG keys -> New SSH key
+Paste the public key copied to your clipboard
+```shell script
+$ git clone git@github.com:Kristina-hub/4001Y_Syllabus_Manager_Interface.git
+```
+
+### Make a txt file
+```shell script
+$ cd 4001Y_Syllabus_Manager_Interface/
+$ ls
+$ touch file.txt
+$ nano file.txt
+CTRL X -> Y -> Enter
+```
+
+### Push to Git Repo
+```shell script
+$ git pull
+$ git add .
+$ git commit -m "comment"
+$ git push
+```
+If issues with git pull or git push, save your changes somewhere and:
+```shell script
+$ git reset --hard origin/main
+$ git log -1
+```
+
+### Create a branch
+```shell script
+$ git branch 
+$ git branch branch-name
+$ git checkout branch-name
+$ git branch
+$ touch file2.txt
+$ git add .
+$ git commit -m "comment"
+$ git checkout main
+$ git branch
+$ git push origin branch-name
+```
+Merge the branch:
+```shell script
+git merge branch-name
+git branch
+git push origin main
+```
+
+## AWS Reference
+Tutorial video: https://www.youtube.com/watch?v=4tDjVFbi31o 
+```shell script
+$ python list
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+$ python list
+$ pip3 install --upgrade pip
+$ pip3 install flask
+$ pip3 freeze > requirements.txt
+$ pip3 freeze
+$ pip3 install -r requirements.txt
+```
+Must be called application.py so easily connects to AWS
+```shell script
+$ touch application.py
+
+from flask import Flask
+application = Flask(__name__)
+
+@application.route('/')
+def hello_world():
+	return 'Hello World'
+	
+$ export FLASK_APP="application.py"
+$ flask run
+```
+Now runs locally: http://127.0.0.1:5000/
+```shell script
+$ git init
+$ git status
+$ touch .gitignore
+```
+Makes sure not to push anything in repo that do not want to push
+```shell script
+$ git pull
+$ git add .
+$ git commit -m "comment"
+$ git push
+```
+AWS -> Services -> Elastic beanstalk 
+Create New Application called syllabus-manager using Python
+Create New Environment called syllabus-manager-env using Web Server Environment
+
+Services -> Developer Tools -> CodePipeline
+Create Pipeline called syllabus-manager
+GitHub version 2 -> Connect to Github 
+Connection name is connection -> Install a New App -> Choose repo name -> Skip build stage -> Deploy to AWS Elastic Beanstalk
+
+This link is no longer local: http://syllabus-manager-env.eba-ukg5xfdy.us-east-1.elasticbeanstalk.com/
