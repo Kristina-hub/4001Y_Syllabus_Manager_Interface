@@ -49,8 +49,8 @@ $ pip3 install -r requirements.txt
 
 ## Git Reference
 
-### Setting up Git Repo
-Tutorial: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account <br/>
+#### Setting up Git Repo
+Tutorial: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account <br/><br/>
 Add to your config file:
 ```shell script
 $ touch ~/.ssh/config
@@ -73,7 +73,7 @@ Paste the public key copied to your clipboard
 $ git clone git@github.com:Kristina-hub/4001Y_Syllabus_Manager_Interface.git
 ```
 
-### Make a txt file
+#### Make a txt file
 ```shell script
 $ cd 4001Y_Syllabus_Manager_Interface/
 $ ls
@@ -82,7 +82,7 @@ $ nano file.txt
 CTRL X -> Y -> Enter
 ```
 
-### Push to Git Repo
+#### Push to Git Repo
 ```shell script
 $ git pull
 $ git add .
@@ -95,7 +95,7 @@ $ git reset --hard origin/main
 $ git log -1
 ```
 
-### Create a branch
+#### Create a branch
 ```shell script
 $ git branch 
 $ git branch branch-name
