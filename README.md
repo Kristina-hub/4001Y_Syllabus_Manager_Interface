@@ -93,8 +93,8 @@ $ pip3 install -r requirements.txt
   - Helped create a picture of what we would like the website to look like
   
 ## Demo
+Created using: https://ezgif.com/maker<br/>
   ![](./demo.gif)
-<br/>Created using: https://ezgif.com/maker
 
 ## Git Reference
 
