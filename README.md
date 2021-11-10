@@ -25,8 +25,10 @@ Miranda and I were discussing how much time it takes for both of us to read thro
 By making it easier for students to put deadlines from their syllabus into their calendars, we hope to incentivize better time management.
 
 ## Possible Action Plan
-Miranda and I are taking the same project course CS3307 where we have teamed up with 3 other computer science majors to code a C++ program capable of scanning course outlines and outputting assignment deadlines to a csv file. 
-In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. Members of my group that do not want to code will be in charge of testing and advertising. The tester will get hundreds of students on Western Campus to test our software and rate their experience. The advertiser will make sure Integrated Science students as well as other Western students know about this website, they will come up with a plan to make this widely known and widely used.
+Miranda and I are taking the same project course CS3307 where we have teamed up with 3 other computer science majors to code a C++ program capable of scanning course outlines and outputting assignment deadlines to a csv file. <br/>
+In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. <br />
+Members of my group that do not want to code will be in charge of testing and advertising. The tester will get hundreds of students on Western Campus to test our software and rate their experience. <br/>
+The advertiser will make sure Integrated Science students as well as other Western students know about this website, they will come up with a plan to make this widely known and widely used.
 
 ## Installation
 ```shell script
@@ -48,6 +50,7 @@ $ pip3 install -r requirements.txt
 ## Git Reference
 
 ### Setting up Git Repo
+Tutorial: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account <br />
 Add to your config file:
 ```shell script
 $ touch ~/.ssh/config
@@ -64,7 +67,7 @@ $ ssh-keygen -t ed25519 -C "email@gmail.com"
 $ ssh-add -K ~/.ssh/id_ed25519
 $ pbcopy < ~/.ssh/id_ed25519.pub
 ```
-Go to GitHub -> Settings -> SSH and GPG keys -> New SSH key
+Go to GitHub -> Settings -> SSH and GPG keys -> New SSH key <br/>
 Paste the public key copied to your clipboard
 ```shell script
 $ git clone git@github.com:Kristina-hub/4001Y_Syllabus_Manager_Interface.git
@@ -152,13 +155,13 @@ $ git add .
 $ git commit -m "comment"
 $ git push
 ```
-AWS -> Services -> Elastic beanstalk 
-Create New Application called syllabus-manager using Python
-Create New Environment called syllabus-manager-env using Web Server Environment
+AWS -> Services -> Elastic beanstalk <br/>
+Create New Application called syllabus-manager using Python <br/>
+Create New Environment called syllabus-manager-env using Web Server Environment <br/>
 
-Services -> Developer Tools -> CodePipeline
-Create Pipeline called syllabus-manager
-GitHub version 2 -> Connect to Github 
-Connection name is connection -> Install a New App -> Choose repo name -> Skip build stage -> Deploy to AWS Elastic Beanstalk
+Services -> Developer Tools -> CodePipeline <br/>
+Create Pipeline called syllabus-manager <br/>
+GitHub version 2 -> Connect to Github <br/>
+Connection name is connection -> Install a New App -> Choose repo name -> Skip build stage -> Deploy to AWS Elastic Beanstalk <br/>
 
-This link is no longer local: http://syllabus-manager-env.eba-ukg5xfdy.us-east-1.elasticbeanstalk.com/
+This link is no longer local: http://syllabus-manager-env.eba-ukg5xfdy.us-east-1.elasticbeanstalk.com/ <br/>
