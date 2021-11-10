@@ -33,8 +33,8 @@ The website will allow the student to upload their syllabi, it will then call th
 <br/><br/>
 
 
-| --------------- | ---------------------- | ---------- | -------- | ---------- | -------- | --------------- |
 | Assignment Name | Assignment Description | Start Date | End Date | Start time | End Time | Boolean All-Day |
+| --------------- | ---------------------- | ---------- | -------- | ---------- | -------- | --------------- |
 
 <br/><br/>
 
