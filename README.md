@@ -18,7 +18,6 @@
 ## About
 Miranda and I were discussing how much time it takes for both of us to read through our course outlines and manually add assignment deadlines one by one into our calendars. We want to make a program that automates this process for us. <br/><br/>
 There are 3 groups working on this project:
-<br/><br/>
 
 | # | Group Name                       | Members                                                 |  Description                                                             |
 | - | -------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -26,17 +25,11 @@ There are 3 groups working on this project:
 | 2 | 4001Y Course Outline to Calendar | Miranda <br/> Kristina <br/> Ridwan | create a program that inputs these assignment deadlines into different calendar applications |
 | 3 | 4001Y Syllabus Manager Interface | Miranda <br/> Kristina <br/> Winston | create a website so students can use the program indicated above                            |
 
-<br/><br/>
-
 The goal of this group is to create the interface for the syllabus manager program. 
 The website will allow the student to upload their syllabi, it will then call the first group's program to scrape all of the assignment deadlines and output them onto a csv file with the following format:
-<br/><br/>
-
 
 | Assignment Name | Assignment Description | Start Date | End Date | Start time | End Time | Boolean All-Day |
 | --------------- | ---------------------- | ---------- | -------- | ---------- | -------- | --------------- |
-
-<br/><br/>
 
 The website will display this table to the user and allow them to make any final modifications. If there is no start time, then it will default to start 1 hour before the deadline. 
 Alternatively, the student can choose to make the assignment deadline an all-day event and ignore time altogether. The website will then input these dates into the calendar of their choice (by outputting a .ics file for example). 
