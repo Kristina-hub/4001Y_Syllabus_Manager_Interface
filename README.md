@@ -79,6 +79,7 @@ $ cd 4001Y_Syllabus_Manager_Interface/
 $ ls
 $ touch file.txt
 $ nano file.txt
+
 CTRL X -> Y -> Enter
 ```
 
@@ -134,7 +135,6 @@ $ touch application.py
 
 from flask import Flask
 application = Flask(__name__)
-
 @application.route('/')
 def hello_world():
 	return 'Hello World'
