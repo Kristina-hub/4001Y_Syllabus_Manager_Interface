@@ -47,9 +47,10 @@ As a first year student, keeping track of upcoming deadlines is crucial to stayi
 The anticipated impact of this project is to encourage students to keep track of their deadlines by using this website to extract assignment due dates from their syllabus and automatically input them into their calendar. Using this website will save them hours of time and it will also encourage them to use a calendar application. The amount of time it takes to manually input the deadlines into a calendar is often a deterrent so using this website will hopefully persuade more WiSc students to use an organization tool to keep track of their upcoming deadlines. 
 
 ## Possible Action Plan
-Miranda and I are taking the same project course CS3307 where we have teamed up with 3 other computer science majors to code a C++ program capable of scanning course outlines and outputting assignment deadlines to a csv file. <br/><br/>
-In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. <br/><br/>
-Members of my group that do not want to code will be in charge of testing and advertising. The tester will get hundreds of students on Western Campus to test our software and rate their experience. <br/><br/>
+Miranda and I are taking the same project course CS3307 where we have teamed up with 3 other computer science majors to code a C++ program capable of scanning course outlines and outputting assignment deadlines to a csv file. 
+<br/><br/>
+In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. 
+Members of my group that do not want to code will be in charge of testing and advertising. The tester will get hundreds of students on Western Campus to test our software and rate their experience. 
 The advertiser will make sure Integrated Science students as well as other Western students know about this website, they will come up with a plan to make this widely known and widely used.
 
 ## Steps
