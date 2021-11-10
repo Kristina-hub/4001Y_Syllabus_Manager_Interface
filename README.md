@@ -93,7 +93,7 @@ $ pip3 install -r requirements.txt
   - Helped create a picture of what we would like the website to look like
   
 ## Demo
-  ![](kristina_global_news/demos/global_news_demo.gif)
+  ![](./demo.gif)
 
 ## Git Reference
 
