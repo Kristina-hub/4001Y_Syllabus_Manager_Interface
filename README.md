@@ -26,7 +26,7 @@ By making it easier for students to put deadlines from their syllabus into their
 
 ## Possible Action Plan
 Miranda and I are taking the same project course CS3307 where we have teamed up with 3 other computer science majors to code a C++ program capable of scanning course outlines and outputting assignment deadlines to a csv file. <br/>
-In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. <br />
+In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. <br/>
 Members of my group that do not want to code will be in charge of testing and advertising. The tester will get hundreds of students on Western Campus to test our software and rate their experience. <br/>
 The advertiser will make sure Integrated Science students as well as other Western students know about this website, they will come up with a plan to make this widely known and widely used.
 
@@ -50,7 +50,7 @@ $ pip3 install -r requirements.txt
 ## Git Reference
 
 ### Setting up Git Repo
-Tutorial: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account <br />
+Tutorial: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account <br/>
 Add to your config file:
 ```shell script
 $ touch ~/.ssh/config
