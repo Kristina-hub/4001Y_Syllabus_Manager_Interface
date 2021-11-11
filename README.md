@@ -94,7 +94,7 @@ $ pip3 install -r requirements.txt
   
 ## Demo
 Created using: https://ezgif.com/maker<br/><br/>
-  ![](./demo.gif)
+  ![](./static/img/demo.gif)
 
 ## Git Reference
 
