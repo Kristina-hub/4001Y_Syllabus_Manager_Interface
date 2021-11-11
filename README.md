@@ -133,7 +133,7 @@ Test code here: https://www.w3schools.com/css/tryit.asp?filename=trycss_comments
 Or run flask and go to http:// to see your changes locally:
 
 ```shell script
-$ set FLASK_APP=application.py
+$ set FLASK_APP = application.py
 $ $env:FLASK_APP = "application.py"
 $ flask run
 
