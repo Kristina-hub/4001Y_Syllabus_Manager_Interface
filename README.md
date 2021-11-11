@@ -98,6 +98,59 @@ Created using: https://ezgif.com/maker<br/><br/>
 
 ## Git Reference
 
+#### Windows
+
+Open Power Shell
+
+#### Basic Commands
+```shell script
+$ dir
+$ echo %cd%
+$ cd /path/
+$ cd ..
+```
+
+#### Setting up Git Repo
+```shell script
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+$ cd \Users\wjrhe\.ssh
+$ clip < ./id_ed25519.pub
+$ git clone git@github.com:Kristina-hub/4001Y_Syllabus_Manager_Interface.git
+$ echo Hello World > "File.txt"
+```
+
+#### Installation
+Install git: https://phoenixnap.com/kb/how-to-install-git-windows <br/>
+Install python: https://www.liquidweb.com/kb/how-to-install-python-on-windows/ <br/>
+Check the box for “Add Python 3.7 to PATH” so that Python can be launched from any command prompt <br/>
+Install pip: https://www.activestate.com/resources/quick-reads/how-to-install-and-use-pip3/ 
+```shell script
+$ pip3 install -r requirements.txt
+```
+
+#### Run locally
+Test code here: https://www.w3schools.com/css/tryit.asp?filename=trycss_comments4 
+Or run flask and go to http:// to see your changes locally:
+
+```shell script
+$ set FLASK_APP=application.py
+$ $env:FLASK_APP = "application.py"
+$ flask run
+
+CTRL Break
+```
+
+#### Push to Git Repo
+This pushes your changes to external website:
+```shell script
+$ git pull
+$ git add .
+$ git commit -m "comment"
+$ git push
+```
+
+#### Mac
+
 #### Setting up Git Repo
 Tutorial: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account <br/><br/>
 Add to your config file:
