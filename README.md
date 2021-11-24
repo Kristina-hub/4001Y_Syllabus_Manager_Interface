@@ -334,7 +334,7 @@ Note that there is a lock icon beside the link to indicate that we are using a S
 Created icon for tab using:<br/>
 https://realfavicongenerator.net/<br/>
 Where we obtained the image:<br/>
-https://www.svgrepo.com/svg/223838/growth-investment<br/>
+https://www.svgrepo.com/svg/3907/search<br/>
 
 ## References
 Pictures used for charities:<br/>
