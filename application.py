@@ -11,3 +11,5 @@ def upload():
 
 # export FLASK_APP="application.py"
 # flask run
+
+# ssh -i file.pem username@ip-address 
