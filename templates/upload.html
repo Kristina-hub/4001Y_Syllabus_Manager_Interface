@@ -13,9 +13,14 @@
 		<div class="background">
 			<div class="text">
 				<!-- text on page -->
-				<?php
-				echo shell_exec("PythonTest.py")
-				?>
+				<h1>Upload Your Syllabus:</h1>
+
+				<!-- test running Python script -->
+				<form action="" method="post">
+					<input type="submit" value="Run Python">
+				</form>
+				
+				<!-- display template table -->
 				<table>
 					<tr>
 					  <th>Assignment</th>
@@ -36,6 +41,7 @@
 					  <td>18/10/2021</td>
 					</tr>
 				  </table>
+				
 				<!-- ?php
 					include 'connectdb.php';
 				? -->
