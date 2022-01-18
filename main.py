@@ -8,10 +8,14 @@
 # --------------------------------------- #
 
 from flask import Flask, render_template
-application = Flask(__name__)
-from static.py.test import Test #from python file import class
+from static.py.test import Test #from file.py import class
+import os
 
-@application.route('/')
+app = Flask(__name__)
+# app._static_folder = os.path.abspath("static/")
+
+# @application.route('/')
+@app.route('/')
 def index():
 	return Test.test_func()
 
@@ -26,17 +30,13 @@ def index():
 # if __name__ == "__main__":
 #     print("test")
 
-# if __name__ == "__main__":
-#     app.debug = True
-#     app.run(host = '0.0.0.0',port=5000) 
+if __name__ == "__main__":
+    app.debug = True
+    app.run(host = '0.0.0.0',port=5000) 
     
     
 '''
-To test locally:
-
 export FLASK_APP="application.py"
+export FLASK_APP="main.py"
 flask run
-
-command shift R to reload static files
-ssh -i file.pem username@ip-address 
 '''
