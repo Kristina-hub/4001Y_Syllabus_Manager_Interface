@@ -51,7 +51,21 @@ command shift R to reload static files
 
 references:
 https://www.pexels.com/photo/clipboard-with-calendar-placed-on-desk-amidst-stationery-6408282/
-https://www.pexels.com/photo/cup-of-fresh-cappuccino-near-laptop-keyboard-and-notebook-414645/
+
+https://www.pexels.com/photo/composition-of-teapot-and-plant-twig-on-book-4271259/
+https://www.pexels.com/photo/composition-of-white-mug-and-notebooks-4271257/
+https://www.pexels.com/photo/notebooks-on-desk-with-ceramic-mug-4271258/
+
+https://www.pexels.com/photo/ferns-and-flowers-surrounding-a-calendar-5498340/
+https://www.pexels.com/photo/white-printer-paper-on-white-table-5499129/
+https://www.pexels.com/photo/white-printer-paper-on-white-printer-paper-5498383/
+https://www.pexels.com/photo/white-paper-on-green-table-5499139/
+
+https://www.pexels.com/photo/close-up-shot-of-a-spiral-notebook-beside-a-cup-6690218/
+https://www.pexels.com/photo/close-up-shot-of-a-pen-on-planner-6690208/
+https://www.pexels.com/photo/flatlay-photo-of-weekly-planner-6690924/
+https://www.pexels.com/photo/close-up-shot-of-weekly-planner-6690930/
+
 https://www.svgrepo.com/svg/4336/calendar
 https://realfavicongenerator.net/
 '''

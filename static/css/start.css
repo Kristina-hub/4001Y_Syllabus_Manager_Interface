@@ -110,6 +110,14 @@ body {
   	background: grey;
 }
 
+img {
+  	width: 100%;
+  	padding: 20px;
+  	object-fit: fill;
+}
+
+
+
 /* Footer */
 .footer {
   	padding: 70px;

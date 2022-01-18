@@ -1,0 +1,62 @@
+<!-- Programmer Name: 04     -->
+<!-- Date: November 26, 2021 -->
+<!-- Language: HTML           -->
+<!-- Class: index page       -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- import stylesheet -->
+    	<link rel="stylesheet" type="text/css" href="../static/css/start.css">
+    	<!-- icon of tab -->
+    	<link rel="shortcut icon" type="image/x-icon" href= "{{ url_for('static',filename='img/favicon.ico') }}">
+    	<!-- name of tab -->
+    	<title>Syllabi</title>
+	</head>
+	<body>
+		<div class="header">
+  			<h1>Syllabi</h1>
+  			<h3>Upload you syllabus  |  Download your deadlines</h3>
+		</div>
+
+		<div class="navbar">
+  			<a href="/">HOME</a>
+<!--   			<a href="/start/" class="active">LET'S START!</a> -->
+  			<a href="/test/" class="active">TUTORIAL</a>
+  			<!-- save previous deadline outputs to your profile -->
+<!--   			<a href="/test/" class="right">ACCOUNT</a> -->
+  			<a href="/test/" class="right">CONTACT US</a>
+		</div>
+
+		<div class="row">
+			<div class="leftside">
+				<h2>1. Upload your syllabus</h2>
+				<!-- gif demonstration -->
+				<div class="fakeimg" style="height:200px;"></div> 
+				<p>Supported formats: .txt, .doc, .docx, .pdf</p>
+			</div>
+			<div class="middle">
+				<h2>2. Choose a calendar</h2>
+				<!-- gif demonstration -->
+				<div class="fakeimg" style="height:200px;">
+					<form method="POST">
+    					<input name="query" id="query">
+    					<input type="submit">
+					</form>
+				</div>
+				<p>Supported calendars: iOS Calendar, Google, Outlook</p>
+			</div>
+			<div class="rightside">
+				<h2>3. Download your deadlines</h2>
+				<!-- gif demonstration -->
+				<div class="fakeimg" style="height:200px;"></div>
+				<p>Click on the .ics file to input your deadlines</p>
+			</div>
+		</div>
+
+		<div class="footer">
+		</div>
+	</body>
+</html>

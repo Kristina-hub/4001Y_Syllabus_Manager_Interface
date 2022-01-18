@@ -71,16 +71,16 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .leftside {
-  	-ms-flex: 30%; /* IE10 */
-  	flex: 30%;
+  	-ms-flex: 33.3%; /* IE10 */
+  	flex: 33.3%;
   	background-color: white;
   	padding: 20px;
 }
 
 /* Main column */
 .middle {   
-  	-ms-flex: 40%; /* IE10 */
-  	flex: 40%;
+  	-ms-flex: 33.4%; /* IE10 */
+  	flex: 33.4%;
   	background-color: white;
   	padding: 20px;
 }
@@ -88,8 +88,8 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .rightside {
-  	-ms-flex: 30%; /* IE10 */
-  	flex: 30%;
+  	-ms-flex: 33.3%; /* IE10 */
+  	flex: 33.3%;
   	background-color: white;
   	padding: 20px;
 }
