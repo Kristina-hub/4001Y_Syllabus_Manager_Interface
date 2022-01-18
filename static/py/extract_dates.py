@@ -7,9 +7,9 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
-class Test():
+class Deadlines():
 
-	def test_func():
-		print("Print test.py to terminal")
-		return "Print test.py to website"
+	def deadlines_func():
+		print("Print extract_dates.py to terminal")
+		return "Print extract_dates.py to website"
 

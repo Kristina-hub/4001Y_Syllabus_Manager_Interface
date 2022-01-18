@@ -7,9 +7,9 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
-class Test():
+class Read():
 
-	def test_func():
-		print("Print test.py to terminal")
-		return "Print test.py to website"
+	def read_func():
+		print("Print read_file.py to terminal")
+		return "Print read_file.py to website"
 

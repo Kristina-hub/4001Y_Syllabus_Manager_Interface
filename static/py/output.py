@@ -7,9 +7,9 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
-class Test():
+class Output():
 
-	def test_func():
-		print("Print test.py to terminal")
-		return "Print test.py to website"
+	def output_func():
+		print("Print output.py to terminal")
+		return "Print output.py to website"
 
