@@ -31,37 +31,4 @@ https://www.pexels.com/photo/clipboard-with-calendar-placed-on-desk-amidst-stati
 https://www.pexels.com/photo/cup-of-fresh-cappuccino-near-laptop-keyboard-and-notebook-414645/
 https://www.svgrepo.com/svg/4336/calendar
 https://realfavicongenerator.net/
-
-public links:
-AWS -> Services -> Elastic beanstalk
-Create New Application called hack-western-8 using Python
-Create New Environment called hack-western-8-env using Web Server Environment
-
-Services -> Developer Tools -> CodePipeline
-Create Pipeline called hack-western-8
-GitHub Version 2 -> Connect to Github
-Connection Name -> Install a New App -> Choose Repo Name -> Skip Build Stage -> Deploy to AWS Elastic Beanstalk
-
-This link is no longer local:
-syllabi-env.eba-knxutzu2.us-east-1.elasticbeanstalk.com
-http://syllabi-env.eba-knxutzu2.us-east-1.elasticbeanstalk.com/
-52.205.181.195
-54.227.40.144
-
-Route 53 -> Registered Domains -> Register Domain -> hack-western-8.com -> Check
-Route 53 -> Hosted zones -> Create Record -> Route Traffic to IPv4 Address -> Alias -> Elastic Beanstalk -> hack-western-8-env -> Create Records
-Create another record but with alias www.
-
-syllabi.ca
-www.syllabi.ca
-http://syllabi.ca
-http://www.syllabi.ca/
-
-AWS Certificate Manager -> Request a Public Certificate -> Domain Name "hack-western-8.com" and "*.hack-western-8.com" -> DNS validation -> Request
-$ dig +short CNAME -> No Output? -> Certificate -> Domains -> Create Records in Route 53
-Elastic Beanstalk -> Environments -> Configuration -> Capacity -> Enable Load Balancing
-Load balancer -> Add listener -> Port 443 -> Protocol HTTPS -> SSL certificate -> Save -> Apply
-
-https://syllabi.ca
-https://syllabi.ca
 '''

@@ -6,7 +6,7 @@
 <?php
 	$dbhost = "172.31.80.128";
 	$dbuser= "root";
-	// $dbpass = "cs3319";
+	$dbpass = "syllabus";
 	$dbname = "vetoffice";
 	$connection = mysqli_connect($dbhost, $dbuser,$dbpass,$dbname);
 	
