@@ -13,27 +13,38 @@ application = Flask(__name__)
 
 
 @application.route('/')
-def menu():
-	return render_template('menu.html')
+def home():
+	return render_template('home.html')
+
+@application.route('/about/')
+def about():
+	return render_template('about.html')
 	
-
-from static.py.read_file import Read
-from static.py.extract_dates import Deadlines
-from static.py.output import Output
-@application.route('/start/')
-def start():
-	Read.read_func()
-	Deadlines.deadlines_func()
-	Output.output_func()
-	return render_template('start.html')
+@application.route('/tutorial/')
+def tutorial():
+	return render_template('tutorial.html')
+	
+@application.route('/contact/')
+def contact():
+	return render_template('contact.html')
 
 
-@application.route('/start/', methods=['POST'])
-def my_form_post():
-	text = request.form['query']
-	query = text.upper()
-	print(query)
-	return query
+# from static.py.read_file import Read
+# from static.py.extract_dates import Deadlines
+# from static.py.output import Output
+# @application.route('/start/')
+# def tutorial():
+# 	Read.read_func()
+# 	Deadlines.deadlines_func()
+# 	Output.output_func()
+# 	return render_template('start.html')
+
+# @application.route('/start/', methods=['POST'])
+# def my_form_post():
+# 	text = request.form['query']
+# 	query = text.upper()
+# 	print(query)
+# 	return query
 
 
 from static.py.test import Test 			# from file.py import class

@@ -9,7 +9,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     	<!-- import stylesheet -->
-    	<link rel="stylesheet" type="text/css" href="../static/css/start.css">
+    	<link rel="stylesheet" type="text/css" href="../static/css/home.css">
     	<!-- icon of tab -->
     	<link rel="shortcut icon" type="image/x-icon" href= "{{ url_for('static',filename='img/favicon.ico') }}">
     	<!-- name of tab -->
@@ -23,37 +23,12 @@
 
 		<div class="navbar">
   			<a href="/">HOME</a>
-<!--   			<a href="/start/" class="active">LET'S START!</a> -->
-  			<a href="/test/">TUTORIAL</a>
-  			<!-- save previous deadline outputs to your profile -->
-<!--   			<a href="/test/" class="right">ACCOUNT</a> -->
-  			<a href="/test/" class="right" class="active">CONTACT US</a>
+  			<a href="/about/">ABOUT US</a>
+  			<a href="/tutorial/">TUTORIAL</a>
+  			<a href="/contact/" class="right" class="active">CONTACT US</a>
 		</div>
 
 		<div class="row">
-			<div class="leftside">
-				<h2>1. Upload your syllabus</h2>
-				<!-- gif demonstration -->
-				<div class="fakeimg" style="height:200px;"></div> 
-				<p>Supported formats: .txt, .doc, .docx, .pdf</p>
-			</div>
-			<div class="middle">
-				<h2>2. Choose a calendar</h2>
-				<!-- gif demonstration -->
-				<div class="fakeimg" style="height:200px;">
-					<form method="POST">
-    					<input name="query" id="query">
-    					<input type="submit">
-					</form>
-				</div>
-				<p>Supported calendars: iOS Calendar, Google, Outlook</p>
-			</div>
-			<div class="rightside">
-				<h2>3. Download your deadlines</h2>
-				<!-- gif demonstration -->
-				<div class="fakeimg" style="height:200px;"></div>
-				<p>Click on the .ics file to input your deadlines</p>
-			</div>
 		</div>
 
 		<div class="footer">
