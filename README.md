@@ -1,350 +1,135 @@
-# 4001Y_Syllabus_Manager_Interface
+# Predicting-Market-Triggers
 
-## Table of Contents
+### Table of Contents
 - [About](#About)
-- [Tentative Goals](#Tentative-Goals)
-- [Anticipated Impact](#Anticipated-Impact)
-- [Possible Action Plan](#Possible-Action-Plan)
-- [Steps](#Steps)
-- [Deliverables](#Deliverables)
+- [Examples of Use Cases](#Examples-of-Use-Cases)
 - [Installation](#Installation)
-- [Kristina](#Kristina)
-- [Miranda](#Miranda)
-- [Winston](#Winston)
-- [Demo](#Demo)
-- [Git Reference](#Git-Reference)
-- [AWS Reference](#AWS-Reference)
+- [Global News Kristina](#Global-News-Kristina)
+- [Twitter Sadaf](#Twitter-Sadaf)
+- [Facebook Yifei](#Facebook-Yifei)
+- [Reddit Yifei](#Reddit-Yifei)
+- [Integration](#Integration)
+
 
 ## About
-Miranda and I were discussing how much time it takes for both of us to read through our course outlines and manually add assignment deadlines one by one into our calendars. We want to make a program that automates this process for us. <br/><br/>
-There are 3 groups working on this project:
+Build a product that focuses on predicting market-moving events before they become widely available on news sites (such as Thomson Reuters, Associate Press) that can be utilized by Citi market traders.
 
-| # | Group Name                       | Members                                                 |  Description                                                             |
-| - | -------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 1 | 3307A Syllabus Scrapper          | Miranda <br/> Kristina <br/> Joud <br/> Liam <br/> Rhea | create a program that gets assignment deadlines from the syllabus        |
-| 2 | 4001Y Course Outline to Calendar | Miranda <br/> Kristina <br/> Ridwan | create a program that inputs these assignment deadlines into different calendar applications |
-| 3 | 4001Y Syllabus Manager Interface | Miranda <br/> Kristina <br/> Winston | create a website so students can use the program indicated above                            |
+## Examples of Use Cases
 
-The goal of this group is to create the interface for the syllabus manager program. 
-The website will allow the student to upload their syllabi, it will then call the first group's program to scrape all of the assignment deadlines and output them onto a csv file with the following format:
-
-| Assignment Name | Assignment Description | Start Date | End Date | Start time | End Time | Boolean All-Day |
-| --------------- | ---------------------- | ---------- | -------- | ---------- | -------- | --------------- |
-
-The website will display this table to the user and allow them to make any final modifications. If there is no start time, then it will default to start 1 hour before the deadline. 
-Alternatively, the student can choose to make the assignment deadline an all-day event and ignore time altogether. The website will then input these dates into the calendar of their choice (by outputting a .ics file for example). 
-
-## Tentative Goals
-1. Create a website / app for the syllabus manager
-2. Get students to test and rate initial versions
-3. Advertise the final product
-
-## Anticipated Impact
-By making it easier for students to put deadlines from their syllabus into their calendars, we hope to incentivize better time management.
-<br/><br/>
-As a first year student, keeping track of upcoming deadlines is crucial to staying on top of one's work. Time Management is especially important as a first year student in Integrated Science while making the transition from High School to University courses. Figuring out how to stay organized will make a huge difference in their performance but often times, students will not take the time to thoroughly read through their syllabus and make a list of all of their assignment deadlines because of how long and tedious the process is. 
-<br/><br/>
-The anticipated impact of this project is to encourage students to keep track of their deadlines by using this website to extract assignment due dates from their syllabus and automatically input them into their calendar. Using this website will save them hours of time and it will also encourage them to use a calendar application. The amount of time it takes to manually input the deadlines into a calendar is often a deterrent so using this website will hopefully persuade more WiSc students to use an organization tool to keep track of their upcoming deadlines. 
-
-## Possible Action Plan
-Miranda and I are taking the same project course CS3307 where we have teamed up with 3 other computer science majors to code a C++ program capable of scanning course outlines and outputting assignment deadlines to a csv file. 
-<br/><br/>
-In this class, I will lead a group to create a website interface for the Syllabus Manager so that Western students can use it. 
-Members of my group that do not want to code will be in charge of testing and advertising. The tester will get hundreds of students on Western Campus to test our software and rate their experience. 
-The advertiser will make sure Integrated Science students as well as other Western students know about this website, they will come up with a plan to make this widely known and widely used.
-
-## Steps
-1.	Use Slack for communication and meet once a week every Wednesday at 2:30pm over Zoom
-2.	Create a UML diagram to plan out all of the classes and organization of the code
-3.	Draw a picture of what we would like the website to look like
-4.	Use Python and GitHub to create the website locally
-5.	Use AWS to host the website externally
-6.	Presentation of the website during an in-person visit of the 1001X class
-7.	Ask WiSc students for feedback on how to change the website
-8.	Ask Felix to send an e-mail to all WiSc Students with the link to the website 
-9.	Post link to WiSc Facebook group chat
-10.	Post link to the private Facebook group called Western Integrated Science
-11.	Post link to the public Facebook group called " "Must Knows" for courses at UWO
-12.	Post link to LinkedIn to reach a wider audience
-
-## Deliverables
-1.	UML diagram 
-2.	Picture of what we would like the website to look like
-3.	A working website
-4.	In-person presentation to the 1001X class
+1. Considers social media (e.g. Twitter, Facebook) and other types (e.g. Global News, Stock News)
+2. Uses fast and slow media types to detect macro-trends so that we can assess the impact on various portfolios
+3. Groups events in a trend based on how this will affect the markets and individual asset classes
+4. Builds a product that could help us evaluate potential “macro trends” and their impact on stocks
 
 ## Installation
+
 ```shell script
-$ pip3 install -r requirements.txt
+$ pip install newsapi-python
+$ pip install tweepy
+$ pip install praw
+$ pip install facebook_scraper
+
 ```
 
-## Kristina
-  - Worked on the UML diagram
-  - Helped create a picture of what we would like the website to look like
-  - Created a Github Repository and helped get all group members connected to GitHub
-  - Deployed the initial website to AWS using Flask
+```shell script
+$ pip install flask
+$ pip install textblob
+$ pip install -U scikit-learn
+
+```
+
+```shell script
+$ pip install nltk
+$ python
+$ import nltk
+$ nltk.download('punkt')
+$ nltk.download('wordnet')
+$ nltk.download('averaged_perceptron_tagger')
+$ nltk.download('twitter_samples')
+$ nltk.download('stopwords')
+
+```
+## Notice
+The repository contains large files, please use following command to pull
+```
+git-lfs pull
+```
+## Global News Kristina
+  - User is prompted to input the name and category of the stock they want to purchase
+  - An API gets the most recent news articles related to this stock
+  - A classifier was trained with positive tweets and negative tweets to identify positive and negative words
+  - The news articles are parsed into tokens and scanned for positive or negative connotations
+  - If the majority of words relating to the stock are positive, the output recommends to buy the stock
+  - If the majority of words relating to the stock are negative, the output recommends to not buy the stock
+
+### Training Classifier
+  ![](kristina_global_news/demos/train_classifier_demo.gif)
+
+### Future Improvements
+  - Currently the classifier correctly identifies positive/negative syntax
+  - Further improvement could be made, however, to catch certain semantics
+
+### Positive Examples
+  - "description": "The good news is the coronavirus that causes COVID-19 doesn't seem to mutate"
+  - The classifier suggests to buy health stocks because the word "good" identifies this as a positive sentence
+  - However, it is better to buy health stocks when coronavirus is spreading more, not less
+
+### Negative Examples
+  - "title": "Facebook Stock Is Being Hurt by Apple's Changes"
+  - The classifier suggests to not buy apple stocks because the word "hurt" identifies this as a negative sentence
+  - However, the negative word applies to facebook, not apple
+
+### Demo
+  ![](kristina_global_news/demos/global_news_demo.gif)
+
+### Tools
+  - Used NewsAPI https://newsapi.org/ because the free version allows 100 requests per day
+
+## Twitter Sadaf
+  - User is prompted to input the name of the stock they want to purchase
+  - An API gets the most recent 1000 tweets related to this stock
+  - Used VADER (Valence Aware Dictionary and Sentiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media
+  - Cleaned tokens, trained model and performed semantic analysis
+  - VADER provides a compound score, it is a metric that calculates the sum of all the lexicon ratings which have been normalized between -1(most extreme negative) and +1 (most extreme positive).
+    positive sentiment : (compound score >= 0.05)
+    neutral sentiment : (compound score > -0.05) and (compound score < 0.05)
+    negative sentiment : (compound score <= -0.05)
+  - The tweets are parsed into tokens and scanned for positive or negative connotations
+  - If the majority of words relating to the stock are positive, the output recommends to buy the stock
+  - If the majority of words relating to the stock are negative, the output recommends to not buy the stock
+
+### Testing Classifier
+  ![](https://github.com/Kristina-hub/Predicting-Market-Triggers/blob/main/sadaf_twitter/demos/testing_classifier.gif)
   
-## Miranda
-  - Worked on the UML diagram
-  - Helped create a picture of what we would like the website to look like
-    
-## Winston
-  - Worked on the UML diagram
-  - Helped create a picture of what we would like the website to look like
+### Positive Examples
+  - "description": "Apple is being treated as the biggest ATM in the world Berkshire Hathaway's best decision last decade could bite"
+  - The classifier suggests to buy stocks because the word "biggest" and "best" identifies this as a positive sentence
+
+### Negative Examples
+  - "title": "#DowJones down nearly 400 points as stocks sell off hard, but #GameStop soars again #stocks #investingâ€¦ https://t.co/j2LcFgbuV9""
+  - The classifier suggests to not buy apple stocks because the word "down" and "hard" identifies this as a negative sentence
+
+### Demo
+  ![](https://github.com/Kristina-hub/Predicting-Market-Triggers/blob/main/sadaf_twitter/demos/twitter_market_prediction_demo.gif)
   
-## Demo
-Created using: https://ezgif.com/maker<br/><br/>
-  ![](./static/img/demo.gif)
+### Tools
+  - Used tweepy API wrapper https://docs.tweepy.org/en/latest/api.html
+  
+## Facebook Yifei
+  - Used a facebook scraper to collect posts data from public stock related groups
+  - Combining Sklearn and NLTK classifieres to imporve the accuracy
+  - Classifieres were trained with short movie reviews to identify positive and negative words
+  - The trained classifiers are saved as ['\*.pickle'] files under [yifei_facebook/algo_pickle] folder
+  - The data collected from facebook are parsed into cleaned tokens and performed senmantic analysis
 
-## Git Reference
+## Reddit Yifei
+  - Used praw API wrapper https://praw.readthedocs.io/en/latest/ to get the newest comment in the subreddit which is related to the input stock
+  - Combining Sklearn and NLTK classifieres to imporve the accuracy
+  - Classifieres were trained with short movie reviews to identify positive and negative words
+  - The trained classifiers are saved as ['\*.pickle'] files under [yifei_reddit/algo_pickle] folder
+  - The data collected from reddit are parsed into cleaned tokens and performed senmantic analysis
 
-#### Windows
-
-Open Power Shell
-
-#### Basic Commands
-```shell script
-$ dir
-$ echo %cd%
-$ cd /path/
-$ cd ..
-```
-
-#### Setting up Git Repo
-```shell script
-$ ssh-keygen -t ed25519 -C "your_email@example.com"
-$ cd \Users\wjrhe\.ssh
-$ clip < ./id_ed25519.pub
-$ git clone git@github.com:Kristina-hub/4001Y_Syllabus_Manager_Interface.git
-$ echo Hello World > "File.txt"
-```
-
-#### Installation
-Install git: https://phoenixnap.com/kb/how-to-install-git-windows <br/>
-Install python: https://www.liquidweb.com/kb/how-to-install-python-on-windows/ <br/>
-Check the box for “Add Python 3.7 to PATH” so that Python can be launched from any command prompt <br/>
-Install pip: https://www.activestate.com/resources/quick-reads/how-to-install-and-use-pip3/ 
-```shell script
-$ pip3 install -r requirements.txt
-```
-
-#### Run locally
-Test code here: https://www.w3schools.com/css/tryit.asp?filename=trycss_comments4 <br/>
-Or run flask and go to http:// to see your changes locally:
-
-```shell script
-$ set FLASK_APP = application.py
-$ $env:FLASK_APP = "application.py"
-$ flask run
-
-CTRL Break
-```
-
-#### Push to Git Repo
-This pushes your changes to external website:
-```shell script
-$ git pull
-$ git add .
-$ git commit -m "comment"
-$ git push
-```
-
-#### Mac
-
-#### Setting up Git Repo
-Tutorial: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account <br/><br/>
-Add to your config file:
-```shell script
-$ touch ~/.ssh/config
-$ open ~/.ssh/config
-
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
-```
-Create an ssh key:
-```shell script
-$ ssh-keygen -t ed25519 -C "email@gmail.com"
-$ ssh-add -K ~/.ssh/id_ed25519
-$ pbcopy < ~/.ssh/id_ed25519.pub
-```
-Go to GitHub -> Settings -> SSH and GPG keys -> New SSH key <br/>
-Paste the public key copied to your clipboard
-```shell script
-$ git clone git@github.com:Kristina-hub/4001Y_Syllabus_Manager_Interface.git
-```
-
-#### Make a txt file
-```shell script
-$ cd 4001Y_Syllabus_Manager_Interface/
-$ ls
-$ touch file.txt
-$ nano file.txt
-
-CTRL X -> Y -> Enter
-```
-
-#### Push to Git Repo
-```shell script
-$ git pull
-$ git add .
-$ git commit -m "comment"
-$ git push
-```
-If issues with git pull or git push, save your changes somewhere and:
-```shell script
-$ git reset --hard origin/main
-$ git log -1
-```
-
-#### Create a branch
-```shell script
-$ git branch 
-$ git branch branch-name
-$ git checkout branch-name
-$ git branch
-$ touch file2.txt
-$ git add .
-$ git commit -m "comment"
-$ git checkout main
-$ git branch
-$ git push origin branch-name
-```
-#### Merge the branch
-```shell script
-$ git merge branch-name
-$ git branch
-$ git push origin main
-```
-
-## AWS Reference
-Tutorial video: https://www.youtube.com/watch?v=4tDjVFbi31o 
-```shell script
-$ python list
-$ python3 -m venv .venv
-$ source .venv/bin/activate
-$ python list
-$ pip3 install --upgrade pip
-$ pip3 install flask
-$ pip3 freeze > requirements.txt
-$ pip3 freeze
-$ pip3 install -r requirements.txt
-```
-Must be called application.py so easily connects to AWS
-```shell script
-$ touch application.py
-
-from flask import Flask
-application = Flask(__name__)
-@application.route('/')
-def hello_world():
-	return 'Hello World'
-	
-$ export FLASK_APP="application.py"
-$ flask run
-```
-Now runs locally: http://127.0.0.1:5000/
-```shell script
-$ git init
-$ git status
-$ touch .gitignore
-```
-Makes sure not to push anything in repo that do not want to push
-```shell script
-$ git pull
-$ git add .
-$ git commit -m "comment"
-$ git push
-```
-AWS -> Services -> Elastic beanstalk <br/>
-Create New Application called syllabus-manager using Python <br/>
-Create New Environment called syllabus-manager-env using Web Server Environment <br/>
-
-Services -> Developer Tools -> CodePipeline <br/>
-Create Pipeline called syllabus-manager <br/>
-GitHub version 2 -> Connect to Github <br/>
-Connection name is connection -> Install a New App -> Choose repo name -> Skip build stage -> Deploy to AWS Elastic Beanstalk <br/>
-
-This link is no longer local: http://syllabus-manager-env.eba-ukg5xfdy.us-east-1.elasticbeanstalk.com/ <br/>
-
-## Flask
-```shell script
-$ touch application.py
-
-from flask import Flask
-application = Flask(__name__)
-@application.route('/')
-def hello_world():
-	return 'Hello World'
-```
-```shell script
-$ export FLASK_APP="application.py"
-$ flask run
-```
-Now runs locally: <br/>
-http://127.0.0.1:5000/<br/>
-
-## AWS Elastic Beanstalk
-Create a Web Server Environment: 
-```shell script
-AWS -> Services -> Elastic beanstalk
-Create New Application called hack-western-8 using Python
-Create New Environment called hack-western-8-env using Web Server Environment
-```
-## AWS CodePipeline
-Link to Github for Continuous Deployment:
-```shell script
-Services -> Developer Tools -> CodePipeline
-Create Pipeline called hack-western-8
-GitHub Version 2 -> Connect to Github
-Connection Name -> Install a New App -> Choose Repo Name -> Skip Build Stage -> Deploy to AWS Elastic Beanstalk
-```
-This link is no longer local: <br/>
-http://hack-western-8-env.eba-a5injkhs.us-east-1.elasticbeanstalk.com/ <br/>
-
-## AWS Route 53
-Register a Domain:
-```shell script
-Route 53 -> Registered Domains -> Register Domain -> hack-western-8.com -> Check
-Route 53 -> Hosted zones -> Create Record -> Route Traffic to IPv4 Address -> Alias -> Elastic Beanstalk -> hack-western-8-env -> Create Records
-Create another record but with alias www.
-```
-Now we can load the website using:<br/>
-[hack-western-8.com](http://hack-western-8.com)<br/>
-www.hack-western-8.com<br/>
-http://hack-western-8.com<br/>
-http://www.hack-western-8.com<br/>
-Note that it says "Not Secure" beside the link<br/>
-
-## AWS Certificate Manager
-Add SSL to use HTTPS: 
-```shell script
-AWS Certificate Manager -> Request a Public Certificate -> Domain Name "hack-western-8.com" and "*.hack-western-8.com" -> DNS validation -> Request
-$ dig +short CNAME -> No Output? -> Certificate -> Domains -> Create Records in Route 53
-Elastic Beanstalk -> Environments -> Configuration -> Capacity -> Enable Load Balancing
-Load balancer -> Add listener -> Port 443 -> Protocol HTTPS -> SSL certificate -> Save -> Apply
-```
-Now we can load the website using:<br/>
-https://hack-western-8.com<br/>
-https://www.hack-western-8.com<br/>
-Note that there is a lock icon beside the link to indicate that we are using a SSL certificate so we are secure<br/>
-
-## FavIcon
-Created icon for tab using:<br/>
-https://realfavicongenerator.net/<br/>
-Where we obtained the image:<br/>
-https://www.svgrepo.com/svg/3907/search<br/>
-
-## References
-Pictures used for charities:<br/>
-Animals: https://www.pexels.com/photo/photo-of-elephants-on-grass-3551498/<br/>
-Health: https://www.pexels.com/photo/person-in-white-long-sleeve-shirt-holding-injection-3985166/<br/>
-Education: https://www.pexels.com/photo/close-up-of-apple-on-top-of-books-256520/<br/>
-Community: https://www.pexels.com/photo/house-lights-turned-on-106399/<br/>
-Environment: https://www.pexels.com/photo/green-leafed-trees-302804/<br/>
-Human Rights: https://www.pexels.com/photo/boy-wearing-green-crew-neck-shirt-jumping-from-black-stone-on-seashore-939702/<br/>
-
-Pictures for home page:<br/>
-https://www.vecteezy.com/photo/3334027-the-man-show-of-money-in-glass-with-plant-growing<br/>
-https://www.vecteezy.com/photo/2928574-save-money-with-stack-coin-growing-your-business-concept-young-plant-growing-in-money-stack-coin<br/>
+## Integration
+  - Each market trigger (Global/Stock News, Facebook, Twitter) returns 1 (buy) or 0 (don't buy)
+  - The recommendation given (ex. 75% likely to be a good investment) is an average of all market triggers
+  - Abstraction allows us to easily add more new market triggers in the future

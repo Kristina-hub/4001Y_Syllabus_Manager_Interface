@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Mitchell Clark",
+            "title": "Apple releases macOS update to prevent damage from third-party docks and dongles - The Verge",
+            "description": "According to Apple’s release notes, the macOS 11.2.2 update fixes an issue where late model MacBook Pros and Airs were being damaged after being plugged into “third-party, non-compliant powered USB-C hubs and docks.”",
+            "url": "https://www.theverge.com/2021/2/25/22301846/apple-macos-update-prevent-third-party-dongle-dock-damage",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/uK7IBBHUs0tcKJMATsswG5lS_xo=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22046476/vpavic_4291_20201113_0366.0.jpg",
+            "publishedAt": "2021-02-25T23:56:09Z",
+            "content": "11.2.2 looks to prevent an issue that was killing newer MacBook Airs and Pros\r\nPhoto by Vjeran Pavic / The Verge\r\nApple is once again releasing an update to prevent a charging problem from killing Ma… [+1741 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Kotaku"
+            },
+            "author": "Ethan Gach",
+            "title": "Court Orders Valve To Hand Over Data On 436 Steam Games To Apple - Kotaku",
+            "description": "Apple has been asking a bunch of companies to give it confidential information in its ongoing legal battle with Epic Games over how much money each company gets to collect off of Fortnite skin sales on the iPhone. Yesterday, a California magistrate judge orde…",
+            "url": "https://kotaku.com/court-orders-valve-to-hand-over-data-on-436-steam-games-1846355019",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/x7mwgucqdd4qtoyrohvk.jpg",
+            "publishedAt": "2021-02-25T17:00:00Z",
+            "content": "Apple has been asking a bunch of companies to give it confidential information in its ongoing legal battle with Epic Games over how much money each company gets to collect off of Fortnite skin sales … [+1439 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "9to5Mac"
+            },
+            "author": null,
+            "title": "Withings expands Apple Health accessories with new cellular smart scale and blood pressure monitor - 9to5Mac",
+            "description": "Withings has been a leader in the smart health device market for years and today the company has announced its latest releases, the Body Pro cellular smart scale and Withings BPM Connect Pro cellular blood pressure monitor. With the extra connectivity, Within…",
+            "url": "https://9to5mac.com/2021/02/25/withings-apple-health-devices-cellular-smart-scale-blood-pressure-monitor/",
+            "urlToImage": "https://i1.wp.com/9to5mac.com/wp-content/uploads/sites/6/2021/02/withings-body-pro-cellular-smart-scale-and-blood-pressure-montior.png?resize=1200%2C628&quality=82&strip=all&ssl=1",
+            "publishedAt": "2021-02-25T14:00:00Z",
+            "content": "Withings has been a leader in the smart health device market for years and today the company has announced its latest releases, the Body Pro cellular smart scale and Withings BPM Connect Pro cellular… [+2736 chars]"
+        }
+    ]
+}
