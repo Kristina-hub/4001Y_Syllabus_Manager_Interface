@@ -14,16 +14,13 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-# @app.route('/upload')
-# def upload():
-#     return render_template('upload.html')
-
-# from static.py.test import Test #from file.py import class
-# @application.route('/')
-# def index():
-# 	return Test.test_func() #call function
+from static.py.test import Test 			# from file.py import class
+@app.route('/test/')
+def test():
+	return Test.test_func() 				# call function
 	
 '''
+how to run locally:
 export FLASK_APP="application.py"
 flask run
 command shift R to reload static files
@@ -34,4 +31,5 @@ https://www.pexels.com/photo/cup-of-fresh-cappuccino-near-laptop-keyboard-and-no
 https://www.svgrepo.com/svg/4336/calendar
 https://realfavicongenerator.net/
 '''
+
 
