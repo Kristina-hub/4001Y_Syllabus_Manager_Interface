@@ -31,5 +31,3 @@ https://www.pexels.com/photo/cup-of-fresh-cappuccino-near-laptop-keyboard-and-no
 https://www.svgrepo.com/svg/4336/calendar
 https://realfavicongenerator.net/
 '''
-
-
