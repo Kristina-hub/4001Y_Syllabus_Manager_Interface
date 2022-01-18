@@ -1,0 +1,44 @@
+body, html {
+  	margin: 0;
+  	height: 100%;
+}
+
+/* background image */
+/* https://www.pexels.com/photo/bridge-with-lights-at-night-240572/ */
+.background {
+  	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/background.jpg");
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size: cover;
+  	height: 100%; 
+}
+
+.text {
+	color: white;					/* text color */
+  	text-align: center;				/* center text */
+  	position: absolute;
+  	transform: translate(-50%, -50%);	
+  	top: 50%;							
+  	left: 50%;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+/* start button */
+.text button {
+	color: black;					/* text color */
+	text-align: center;				/* text is center of button */
+	font-size: 20px;				/* text size */
+	background-color: white;		/* button color */
+	padding: 20px 50px; 			/* button size */
+	border: none;					/* no border */
+}
+
+/* when hover over button */
+.text button:hover {
+	color: white; 					/* text color */
+  	background-color: #8b8b8b;		/* button color */
+  	cursor: pointer;				/* the mouse changes to a different icon */
+}

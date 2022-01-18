@@ -1,0 +1,56 @@
+<!-- Programmer Name: 04     -->
+<!-- Date: November 26, 2021 -->
+<!-- Language: PHP           -->
+<!-- Class: index page       -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8">
+    	<link rel="stylesheet" type="text/css" href="static/css/upload.css">
+    	<!-- icon of tab -->
+    	<link rel="shortcut icon" type="image/x-icon" href= "{{ url_for('static',filename='img/favicon.ico') }}">
+    	<!-- name of tab -->
+    	<title>Syllabus</title>
+	</head>
+	<body>
+		<!-- background image -->
+		<div class="background">
+			<div class="text">
+				<!-- text on page -->
+				<h1>Upload Your Syllabus:</h1>
+
+				<!-- test running Python script -->
+				<form action="" method="post">
+					<input type="submit" value="Run Python">
+				</form>
+				
+				<!-- display template table -->
+				<table>
+					<tr>
+					  <th>Assignment</th>
+					  <th>Course</th> 
+					  <th>Percentage</th>
+					  <th>Deadline</th>
+					</tr>
+					<tr>
+					  <td>Assignment 1</td>
+					  <td>CS3307A</td> 
+					  <td>15%</td>
+					  <td>21/09/2021</td>
+					</tr>
+					<tr>
+					  <td>Assignment 2</td>
+					  <td>CS3307A</td> 
+					  <td>15%</td>
+					  <td>18/10/2021</td>
+					</tr>
+				  </table>
+				
+				<!-- ?php
+					include 'connectdb.php';
+				? -->
+			</div>
+		</div>
+	</body>
+</html>
