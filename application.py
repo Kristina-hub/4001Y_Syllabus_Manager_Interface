@@ -8,14 +8,14 @@
 # --------------------------------------- #
 
 from flask import Flask, render_template
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def index():
 	return render_template('index.html')
 
 from static.py.test import Test 			# from file.py import class
-@app.route('/test/')
+@application.route('/test/')
 def test():
 	return Test.test_func() 				# call function
 	
