@@ -12,19 +12,19 @@ from flask import Flask, render_template, request, url_for, redirect
 application = Flask(__name__)
 
 
-@application.route('/')
+@application.route('/', methods=['GET', 'POST'])
 def home():
 	return render_template('home.html')
 
-@application.route('/about/')
+@application.route('/about/',  methods=['GET', 'POST'])
 def about():
 	return render_template('about.html')
 	
-@application.route('/tutorial/')
+@application.route('/tutorial/',  methods=['GET', 'POST'])
 def tutorial():
 	return render_template('tutorial.html')
 	
-@application.route('/contact/')
+@application.route('/contact/',  methods=['GET', 'POST'])
 def contact():
 	return render_template('contact.html')
 
@@ -46,12 +46,12 @@ def contact():
 # 	print(query)
 # 	return query
 
-@application.route('/upload/')
+@application.route('/upload/',  methods=['GET', 'POST'])
 def upload():
 	return render_template('home.html')
 
 from static.py.test import Test 			# from file.py import class
-@application.route('/test/')
+@application.route('/test/',  methods=['GET', 'POST'])
 def test():
 	return Test.test_func() 				# call function
 	

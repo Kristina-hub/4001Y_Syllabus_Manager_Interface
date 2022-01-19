@@ -1,7 +1,11 @@
-<!-- Programmer Name: 04     -->
-<!-- Date: November 26, 2021 -->
-<!-- Language: HTML           -->
-<!-- Class: index page       -->
+<!--  --------------------------------------- -->
+<!--        Authors: Kristina Kacmarova       -->
+<!--                Miranda Postma       	  -->
+<!--                Ridwan Bari               -->
+<!--                Winston Herold            -->
+<!--       Python Version: 3.7.4              -->
+<!--       Created on: 2022-01-18             -->
+<!--  --------------------------------------- -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +21,30 @@
     	<!-- imports -->
     	<script src="../static/js/upload.js" type="text/javascript">
     	</script>
+    	
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    	</script>
+    	
+    	<script>
+    	$(document).ready(function() {
+    		var readURL = function(input) {
+    			if (input.files && input.files[0]) {
+    				var reader = new FileReader();
+    				reader.onload = function (e) {
+    					$('.profile-pic').attr('src', e.target.result);
+    				}
+    				reader.readAsDataURL(input.files[0]);
+    			}
+    		}
+    		$(".file-upload").on('change', function(){
+    			readURL(this);
+    		});
+    		$(".upload-button").on('click', function() {
+    			$(".file-upload").click();
+    		});
+    	});
+		</script>
+
 	</head>
 	<body>
 		<div class="header">
@@ -31,30 +59,33 @@
   			<a href="/contact/" class="right">CONTACT US</a>
 		</div>
 
-		<div class="row">
-			<div class="leftside" onclick="call_alert()" style="cursor:pointer;">
-				<img src="../static/img/book-1.jpg">
-				<h2>1. Upload your syllabus</h2>
-				<p>Supported formats: .txt, .docx, .pdf</p>
-			</div>  			
-			<div class="middle" onclick="location.href='/about/';" style="cursor:pointer;">
-				<img src="../static/img/book-2.jpg">
-				<h2>2. Choose a calendar</h2>
-				<p>Supported calendars: iOS Calendar, Google, Outlook</p>
+		
+		<div class="row">			
+			<div class="leftside" style="cursor:pointer;">
+				<div class="upload-button">
+					<img src="../static/img/book-1.jpg">
+					<h2>1. Upload your syllabus</h2>
+					<p>Supported formats: .txt, .docx, .pdf</p>
+				</div>
+			</div>  	
+			<div class="middle" style="cursor:pointer;">
+				<div class="upload-button">
+					<img src="../static/img/book-2.jpg">
+					<h2>2. Choose a calendar</h2>
+					<p>Supported calendars: iOS Calendar, Google, Outlook</p>
+				</div>
 			</div>
-			<div class="rightside" onclick="location.href='/about/';" style="cursor:pointer;">
-				<img src="../static/img/book-3.jpg">
-				<h2>3. Download your deadlines</h2>
-				<p>Click on the .ics file to input your deadlines</p>
+			<div class="rightside" style="cursor:pointer;">
+				<div class="upload-button">
+					<img src="../static/img/book-3.jpg">
+					<h2>3. Download your deadlines</h2>
+					<p>Click on the .ics file to input your deadlines</p>
+				</div>
 			</div>
 		</div>
-		
-		
-<!-- 
-		<form action="../static/php/upload.php">
-  			<input type="file" id="myFile" name="filename">
-		</form>
- -->
+		<input class="file-upload" type="file" accept="image/*"/>
+
+
 		
 		<div class="row">
 			<div class="full">
@@ -69,16 +100,28 @@
 
 
 <!-- 
-  			<form method="POST" action="/stocks">
-  			<div class="category">
-    			<button class="category_box" name="query" value="Animals" style="background-image: url('../static/img/animals.jpg');">
-    				<h2 style="color: white;">Animals</h2>
-    			</button>
-  			</div>
-  			</form>
+			<div class="leftside" onclick="loadDoc()" style="cursor:pointer;">
+				<img src="../static/img/book-1.jpg">
+				<h2>1. Upload your syllabus</h2>
+				<p>Supported formats: .txt, .docx, .pdf</p>
+			</div>  
  -->
 
-
+<!-- 
+		<form action="../static/php/upload.php">
+		<div class="flex">
+			<input type="button" class="flex-child" id="myFile" value="Start" name="filename">
+			<input type="button" class="flex-child" id="myFile"  value="Stop" name="filename">
+			<input type="button" class="flex-child" id="myFile"  value="Stop" name="filename">
+		</div>
+		</form>
+ -->
+		
+<!-- 
+		<form action="../static/php/upload.php">
+  			<input type="file" id="myFile" name="filename">
+		</form>
+ -->
 			
 <!-- 
 			<form method="POST" action="/test/">
@@ -91,5 +134,36 @@
   				</div>
   			</form>
  -->
- 
+
+
+<!-- 
+categories.category {   
+  	-ms-flex: 33.3%; IE10  	flex: 33.3%;
+  	background-color: white;
+  	padding: 20px;
+}
+
+.category_box {
+	opacity: 0.5;
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-align: center;
+  	padding: 20px;
+  	margin-top: 20px;
+  	border-radius: 25px;
+  	color: black;
+  	width:100%;
+	height:100%;
+}
+
+.category_box::before {    
+    content: "";
+}
+
+.category:hover {
+  	background-color: black;
+  	color: white;
+}
+ -->
+
  

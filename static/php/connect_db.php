@@ -1,7 +1,11 @@
-<!-- Programmer Name: 04     -->
-<!-- Date: November 26, 2021 -->
-<!-- Language: PHP           -->
-<!-- Class: index page       -->
+<!--  --------------------------------------- -->
+<!--        Authors: Kristina Kacmarova       -->
+<!--                Miranda Postma       	  -->
+<!--                Ridwan Bari               -->
+<!--                Winston Herold            -->
+<!--       Python Version: 3.7.4              -->
+<!--       Created on: 2022-01-18             -->
+<!--  --------------------------------------- -->
 
 <?php
 	$dbhost = "172.31.80.128";
