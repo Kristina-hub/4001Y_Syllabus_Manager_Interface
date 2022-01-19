@@ -46,6 +46,9 @@ def contact():
 # 	print(query)
 # 	return query
 
+@application.route('/upload/')
+def upload():
+	return render_template('home.html')
 
 from static.py.test import Test 			# from file.py import class
 @application.route('/test/')
