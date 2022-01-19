@@ -35,12 +35,15 @@
   			<a href="/contact/" class="right">CONTACT US</a>
 		</div>
 
+
 		<div class="row">			
 			<div class="leftside" style="cursor:pointer;">
 				<div class="upload-button">
 					<img src="../static/img/book-1.jpg">
 					<h2>1. Upload your syllabus</h2>
 					<p>Supported formats: .txt, .docx, .pdf</p>
+					<p id="status"></p>
+					<p id="filename"></p>
 				</div>
 			</div>  	
 			<div class="middle" style="cursor:pointer;">
@@ -58,10 +61,10 @@
 				</div>
 			</div>
 		</div>
-		<input class="file-upload" type="file" accept="image/*"/>
-
-
+		<input class="file-upload" type="file" id="input-file"/> 
 		
+		<textarea id="content-target"></textarea>
+
 		<div class="row">
 			<div class="full">
 				<img src="../static/img/calendar.jpg">
