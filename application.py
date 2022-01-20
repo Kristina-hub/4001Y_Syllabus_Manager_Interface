@@ -39,44 +39,12 @@ def contact():
 
 
 '''---------------Actions----------------'''
-
-@application.route('/upload_static_file', methods=['POST'])
-def upload_static_file():
-	 print("Got request in static files")
-	 print(request.files)
-	 f = request.files['static_file'] #type: <class 'werkzeug.datastructures.FileStorage'>
-	 print(f.read())
-	 print(type(f))
-	 #f.save(f.filename)
-	 #nf = open(f, "r") #need str, bytes or os.PathLike
-	 #textFromFile = f.read()
-	 #print("Print read_file.py to terminal - textFromFile: " + textFromFile)
-	 resp = {"success": True, "response": "file saved!"}
-	 return jsonify(resp), 200
- 
+			
 @application.route('/upload/',  methods=['GET', 'POST'])
 def upload():
-    # GET request
-    if request.method == 'GET':
-    	#textFromFile = request.args.get('textFromFile')
-    	
-    	f = request.args.get('fileToLoad') #type: <class 'str'>
-    	print(type(f))
-    	f.save(f.filename)
-    	resp = {"success": True, "response": "file saved!"}
-    	return "file saved!"
-	 
-	 	#fileToLoad = request.args.get('fileToLoad')
-    	#message = Read.read_func(fileToLoad)
-    	#return message  # jsonify(message) 
-    	
-		# Deadlines.deadlines_func()
-		# Output.output_func()
-        # message = {'greeting':'Hello from Flask!'}
-    # POST request
-    if request.method == 'POST':
-        print(request.get_json())  
-        return 'Sucesss', 200 
+    fileToLoad = request.args.get('fileToLoad')
+    message = Read.read_func(fileToLoad)
+    return message  
         
 	
 '''

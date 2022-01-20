@@ -10,9 +10,7 @@
 class Read():
 
 	def read_func(fileToLoad):
-		f = open(fileToLoad, "r")
-		textFromFile = f.read()
-		print("Print read_file.py to terminal - textFromFile: " + textFromFile)
-		returnText = "Print read_file.py to website - textFromFile: " + textFromFile
+		print("Print read_file.py to terminal - textFromFile: " + fileToLoad)
+		returnText = "Print read_file.py to website - textFromFile: " + fileToLoad
 		return returnText
 
