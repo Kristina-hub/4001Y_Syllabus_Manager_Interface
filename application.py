@@ -42,10 +42,19 @@ def contact():
 			
 @application.route('/upload/',  methods=['GET', 'POST'])
 def upload():
-    fileToLoad = request.args.get('fileToLoad')
-    message = Read.read_func(fileToLoad)
+    f = request.args.get('f')
+    print(f)
+    print(type(f))
+    message = "file" #message = Read.read_func(fileToLoad)
     return message  
-        
+
+@application.route('/upload_static_file', methods=['POST'])
+def upload_static_file():
+ 	f = request.files['new_file'] #static_file
+ 	print(type(f))
+ 	message = Read.read_func(f)
+ 	return message
+	
 	
 '''
 how to run locally:

@@ -44,7 +44,11 @@
 					<p>Supported formats: .txt, .docx, .pdf</p>
 				</div>
 			</div>
-			<input class="file-upload" type="file" id="input-file"/>   	
+			
+			<form enctype = "multipart/form-data">
+				<input class="file-upload" type="file" id="input-file" name="new_file"/> 
+			</form>
+			
 			<div class="middle" style="cursor:pointer;">
 				<div class="upload-button">
 					<img src="../static/img/book-2.jpg">
@@ -60,6 +64,14 @@
 				</div>
 			</div>
 		</div>
+		
+		
+
+		<form enctype = "multipart/form-data">
+		   <input id="input-file" type="file" name="static_file" />
+		   <button id="upload-button" onclick="uploadFile(this.form)"> Upload </button>
+		</form>
+
 
 
 		<div class="row">
