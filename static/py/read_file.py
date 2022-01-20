@@ -9,7 +9,8 @@
 
 class Read():
 
-	def read_func():
-		print("Print read_file.py to terminal")
-		return "Print read_file.py to website"
+	def read_func(textFromFile):
+		print("Print read_file.py to terminal - textFromFile: " + textFromFile)
+		returnText = "Print read_file.py to website - textFromFile: " + textFromFile
+		return returnText
 

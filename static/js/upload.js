@@ -13,8 +13,14 @@ $(document).ready(function() {
 		var fileToLoad = document.getElementById("input-file").files[0];
 	  	var fileReader = new FileReader();
 	  	fileReader.onload = function(fileLoadedEvent) {
-	  		var textFromFileLoaded = fileLoadedEvent.target.result;
-		  	document.getElementById("text").innerHTML = textFromFileLoaded;
+	  		var textFromFile = fileLoadedEvent.target.result;
+	  		
+	  		fetch(`/upload/?textFromFile=${textFromFile}`).then(function (response) { 		// call read_file.py with parameter textFromFile
+          		return response.text();
+      		}).then(function (text) {
+				document.getElementById("text").innerHTML = text; 							// return text from read_file.py
+			});
+		  	
 	  	};
 	  	fileReader.readAsText(fileToLoad, "UTF-8");
 	}
@@ -24,7 +30,6 @@ $(document).ready(function() {
     	document.getElementById("left").style.opacity = "0.5";
     	document.getElementById("full").style.opacity = "0.5";
     	document.getElementById("whitebox").style.visibility = "visible";
-//     	$(".whitebox").show();
     });
     
     $(".upload-button").on('click', function() {

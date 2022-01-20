@@ -8,9 +8,18 @@
 # --------------------------------------- #
 
 
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect, jsonify
+from flask.globals import request
 application = Flask(__name__)
 
+'''---------------From file.py import class----------------'''
+
+from static.py.read_file import Read					
+from static.py.extract_dates import Deadlines
+from static.py.output import Output
+
+
+'''---------------Render pages----------------'''
 
 @application.route('/', methods=['GET', 'POST'])
 def home():
@@ -29,32 +38,23 @@ def contact():
 	return render_template('contact.html')
 
 
-# from static.py.read_file import Read
-# from static.py.extract_dates import Deadlines
-# from static.py.output import Output
-# @application.route('/start/')
-# def tutorial():
-# 	Read.read_func()
-# 	Deadlines.deadlines_func()
-# 	Output.output_func()
-# 	return render_template('start.html')
-
-# @application.route('/start/', methods=['POST'])
-# def my_form_post():
-# 	text = request.form['query']
-# 	query = text.upper()
-# 	print(query)
-# 	return query
-
+'''---------------Actions----------------'''
+			
 @application.route('/upload/',  methods=['GET', 'POST'])
 def upload():
-	return render_template('home.html')
-
-from static.py.test import Test 			# from file.py import class
-@application.route('/test/',  methods=['GET', 'POST'])
-def test():
-	return Test.test_func() 				# call function
-	
+    # GET request
+    if request.method == 'GET':
+    	textFromFile = request.args.get('textFromFile')
+    	message = Read.read_func(textFromFile)
+    	return message  # jsonify(message) 
+		# Deadlines.deadlines_func()
+		# Output.output_func()
+        # message = {'greeting':'Hello from Flask!'}
+    # POST request
+    if request.method == 'POST':
+        print(request.get_json())  
+        return 'Sucesss', 200
+        
 	
 '''
 how to run locally:
@@ -62,7 +62,10 @@ export FLASK_APP="application.py"
 flask run
 http://127.0.0.1:5000/
 command shift R to reload static files
+'''
 
+
+'''
 references:
 https://www.pexels.com/photo/clipboard-with-calendar-placed-on-desk-amidst-stationery-6408282/
 
