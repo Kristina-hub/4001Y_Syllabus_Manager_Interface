@@ -39,14 +39,6 @@ def contact():
 
 
 '''---------------Actions----------------'''
-			
-@application.route('/upload/',  methods=['GET', 'POST'])
-def upload():
-    f = request.args.get('f')
-    print(f)
-    print(type(f))
-    message = "file" #message = Read.read_func(fileToLoad)
-    return message  
 
 @application.route('/upload_static_file', methods=['POST'])
 def upload_static_file():
