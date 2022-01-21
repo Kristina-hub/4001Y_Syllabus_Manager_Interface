@@ -15,7 +15,7 @@ from PIL import Image
 import pytesseract
 from pdf2image import convert_from_path
 
-class Read():
+class ReadFile():
 
 	def text_pdf(f, directory):
 		text = ""
