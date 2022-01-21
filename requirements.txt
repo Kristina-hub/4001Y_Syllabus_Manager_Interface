@@ -12,3 +12,6 @@ docx==0.2.4
 pytesseract==0.3.8
 pdf2image==1.16.0
 dateparser==1.1.0
+sutime==1.0.1
+maven
+mvn dependency:copy-dependencies -DoutputDirectory=./jars -f $(python3 -c 'import importlib; import pathlib; print(pathlib.Path(importlib.util.find_spec("sutime").origin).parent / "pom.xml")')
