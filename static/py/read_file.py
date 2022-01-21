@@ -66,15 +66,15 @@ class ReadFile():
 			f.save(directory + f.filename)
 			
 			if (f.filename.split('.')[1] == "txt"):
-				text = Read.txt_file(f, directory)
+				text = ReadFile.txt_file(f, directory)
 		
 			elif (f.filename.split('.')[1] == "docx"): 
-				text = Read.docx_file(f, directory)
+				text = ReadFile.docx_file(f, directory)
 			
 			elif (f.filename.split('.')[1] == "pdf"): 
-				text = Read.text_pdf(f, directory) 						#text PDFs
+				text = ReadFile.text_pdf(f, directory) 						#text PDFs
 				if (text == ""): 
-					text = Read.image_pdf(f, directory) 				#image PDFs
+					text = ReadFile.image_pdf(f, directory) 				#image PDFs
 					
 		print("Exit: read_file.py")
 		return text
