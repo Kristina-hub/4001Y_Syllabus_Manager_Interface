@@ -13,7 +13,7 @@ $(document).ready(function() {
 	function loadFile(form) {    	
  		const formData = new FormData(form); 		
  		var oReq = new XMLHttpRequest(); 		
- 		oReq.open("POST", "upload_static_file", true); 		
+ 		oReq.open("POST", "upload", true); 		
  		oReq.send(formData);
  		oReq.onload = function(oEvent) {
  			document.getElementById("left").style.opacity = "0.5";

@@ -40,10 +40,9 @@ def contact():
 
 '''---------------Actions----------------'''
 
-@application.route('/upload_static_file', methods=['POST'])
-def upload_static_file():
- 	f = request.files['new_file'] #static_file
- 	print(type(f))
+@application.route('/upload', methods=['POST'])
+def upload():
+ 	f = request.files['new_file'] 
  	message = Read.read_func(f)
  	return message
 	
