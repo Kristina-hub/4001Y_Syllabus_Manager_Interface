@@ -16,13 +16,14 @@ $(document).ready(function() {
  		oReq.open("POST", "upload", true); 		
  		oReq.send(formData);
  		oReq.onload = function(oEvent) {
- 			document.getElementById("left").style.opacity = "0.5";
-    		document.getElementById("full").style.opacity = "0.5";
-    		document.getElementById("whitebox").style.visibility = "visible";
     		document.getElementById("text").innerHTML = oReq.response; 
      	};
 	}
     $(".file-upload").on('change', function() {
+    	document.getElementById("left").style.opacity = "0.5";
+    	document.getElementById("full").style.opacity = "0.5";
+    	document.getElementById("whitebox").style.visibility = "visible";
+    	document.getElementById("text").innerHTML = "Loading..."; 
     	loadFile(this.form);
     });
     $(".upload-button").on('click', function() {
