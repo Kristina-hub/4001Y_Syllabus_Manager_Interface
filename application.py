@@ -43,7 +43,8 @@ def contact():
 @application.route('/upload', methods=['POST'])
 def upload():
  	f = request.files['new_file'] 
- 	message = Read.read_func(f)
+ 	text = Read.read_func(f)
+ 	message = Deadlines.deadlines_func(text)
  	return message
 	
 	

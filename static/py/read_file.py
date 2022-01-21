@@ -73,7 +73,8 @@ class Read():
 			
 			elif (f.filename.split('.')[1] == "pdf"): 
 				text = Read.text_pdf(f, directory) 						#text PDFs
-				if (text == ""): text = Read.image_pdf(f, directory) 	#image PDFs
+				if (text == ""): 
+					text = Read.image_pdf(f, directory) 				#image PDFs
 					
 		print("Exit: read_file.py")
 		return text
