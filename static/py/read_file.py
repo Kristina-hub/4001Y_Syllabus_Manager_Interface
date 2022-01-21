@@ -11,6 +11,9 @@ from werkzeug.datastructures import FileStorage
 import PyPDF2
 import tempfile
 import docx
+from PIL import Image
+import pytesseract
+from pdf2image import convert_from_path
 
 class Read():
 
@@ -24,7 +27,19 @@ class Read():
 		return text
 					
 	def image_pdf(f, directory):
-		text = "image-pdf"
+		text = ""
+		pages = convert_from_path(directory + f.filename, 500)
+		image_counter = 1
+		for page in pages:
+			filename = "page_"+str(image_counter)+".jpg"
+			page.save(directory + filename, 'JPEG')
+			image_counter = image_counter + 1
+		filelimit = image_counter-1
+		for i in range(1, filelimit + 1):
+			filename = "page_"+str(i)+".jpg"
+			pagetext = str(((pytesseract.image_to_string(Image.open(directory + filename)))))
+			pagetext = pagetext.replace('-\n', '') 
+			text += pagetext 
 		return text
 	
 	def docx_file(f, directory):										#does not work for tables, headers, footers, foot notes
@@ -34,7 +49,9 @@ class Read():
 			text += para.text
 		return text
 	
-	def docx_file(f, directory):
+	def txt_file(f, directory):
+		f = open(directory + f.filename, "r")
+		text = f.read()
 		return text
 
 	def read_func(f):
@@ -45,11 +62,11 @@ class Read():
 		print(f.content_type)
 		text = "Error: unable to read file"
 		
-		with tempfile.TemporaryDirectory() as directory:
+		with tempfile.TemporaryDirectory() as directory:				#creates a temp directory and then deletes 
 			f.save(directory + f.filename)
 			
 			if (f.filename.split('.')[1] == "txt"):
-				text = f.read().decode("utf-8")
+				text = Read.txt_file(f, directory)
 		
 			elif (f.filename.split('.')[1] == "docx"): 
 				text = Read.docx_file(f, directory)
@@ -62,7 +79,3 @@ class Read():
 		return text
 		
 		
-		
-		
-		
-
