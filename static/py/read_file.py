@@ -9,8 +9,8 @@
 
 #pip list | grep -F werkzeug
 from werkzeug.datastructures import FileStorage		#pip install werkzeug
-#import PyPDF2										#pip install PyPDF2
-#import tempfile
+import PyPDF2										#pip install PyPDF2
+import tempfile
 #import docx											#pip install docx
 #from PIL import Image								#pip install Pillow
 #import pytesseract									#pip install pytesseract
