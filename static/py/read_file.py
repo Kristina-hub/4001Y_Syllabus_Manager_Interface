@@ -14,7 +14,7 @@ import tempfile
 #import docx											#pip install docx
 from PIL import Image								#pip install Pillow
 import pytesseract									#pip install pytesseract
-#from pdf2image import convert_from_path				#pip install pdf2image
+from pdf2image import convert_from_path				#pip install pdf2image
 
 
 class ReadFile():
