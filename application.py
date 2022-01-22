@@ -7,7 +7,7 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
-
+#flask --version
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask.globals import request
 application = Flask(__name__)

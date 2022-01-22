@@ -8,7 +8,7 @@
 # --------------------------------------- #
 
 #pip list | grep -F werkzeug
-# from werkzeug.datastructures import FileStorage		#pip install werkzeug
+from werkzeug.datastructures import FileStorage		#pip install werkzeug
 # import PyPDF2										#pip install PyPDF2
 # import tempfile
 # import docx											#pip install docx
@@ -58,13 +58,12 @@ class ReadFile():
 
 	def read_func(f):
 		print("Enter: read_file.py")
-		text = "test"
-# 		print(type(f)) 													#FileStorage
-# 		print(f.filename)
-# 		print(f.filename.split('.')[1])
-# 		print(f.content_type)
-# 		text = "Error: unable to read file"
-# 		
+		print(type(f)) 													#FileStorage
+		print(f.filename)
+		print(f.filename.split('.')[1])
+		print(f.content_type)
+		text = "Error: unable to read file"
+		
 # 		with tempfile.TemporaryDirectory() as directory:				#creates a temp directory and then deletes 
 # 			f.save(directory + f.filename)
 # 			
