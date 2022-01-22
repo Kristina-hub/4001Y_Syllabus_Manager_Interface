@@ -15,7 +15,8 @@ from PIL import Image								#pip install Pillow
 import pytesseract									#pip install pytesseract
 from pdf2image import convert_from_path				#pip install pdf2image
 
-#import docx											#pip install docx  pip install python-docx
+#error
+import docx											#pip install docx  pip install python-docx
 
 class ReadFile():
 
