@@ -7,13 +7,15 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
-from werkzeug.datastructures import FileStorage
-import PyPDF2
+#pip list | grep -F werkzeug
+from werkzeug.datastructures import FileStorage		#pip install werkzeug
+import PyPDF2										#pip install PyPDF2
 import tempfile
-import docx
-from PIL import Image
-import pytesseract
-from pdf2image import convert_from_path
+import docx											#pip install docx
+from PIL import Image								#pip install Pillow
+import pytesseract									#pip install pytesseract
+from pdf2image import convert_from_path				#pip install pdf2image
+
 
 class ReadFile():
 
