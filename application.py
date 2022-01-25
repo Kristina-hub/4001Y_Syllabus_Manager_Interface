@@ -44,9 +44,10 @@ def contact():
 def upload():
  	f = request.files['new_file'] 
  	text = ReadFile.read_func(f)
- 	dates = ExtractDates.dates_func(text)
+ 	#dates = ExtractDates.dates_func(text)
  	#Output.output_func(dates)
- 	message = dates + "<br/>" + text
+ 	#message = text + "<br/>" + dates
+ 	message = text
  	return message
 	
 	
