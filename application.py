@@ -44,12 +44,11 @@ def contact():
 def upload():
  	f = request.files['new_file'] 
  	text = ReadFile.read_func(f)
- 	#dates = ExtractDates.dates_func(text)
+ 	dates = ExtractDates.dates_func(text)
  	#Output.output_func(dates)
- 	#message = text + "<br/>" + dates
- 	message = text
+ 	message = dates + "<br/>" + text
+ 	#message = text
  	return message
-	
 	
 '''
 how to run locally:
