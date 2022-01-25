@@ -44,7 +44,11 @@
 					<p>Supported formats: .txt, .docx, .pdf</p>
 				</div>
 			</div>
-			<input class="file-upload" type="file" id="input-file" name="new_file"/>   	
+			
+			<form enctype = "multipart/form-data">
+				<input class="file-upload" type="file" id="input-file" name="new_file"/> 
+			</form>
+			
 			<div class="middle" style="cursor:pointer;">
 				<div class="upload-button">
 					<img src="../static/img/book-2.jpg">
@@ -52,6 +56,7 @@
 					<p>Supported calendars: iOS Calendar, Google, Outlook</p>
 				</div>
 			</div>
+			
 			<div class="rightside" style="cursor:pointer;">
 				<div class="upload-button">
 					<img src="../static/img/book-3.jpg">
@@ -60,14 +65,6 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		<form enctype = "multipart/form-data" onsubmit="return false;" >
-		   <input id="file" type="file" name="static_file" />
-		   <button id="upload-button" onclick="uploadFile(this.form)"> Upload </button>
-		</form>
-		<div id="static_file_response"> </div>
-
 
 		<div class="row">
 			<div class="full">
@@ -77,7 +74,6 @@
 				</div>
 			</div>
 		</div>
-
 
 		<div class="footer">
 		</div>

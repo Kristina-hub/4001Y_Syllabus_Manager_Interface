@@ -7,15 +7,15 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
-
+#flask --version
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask.globals import request
 application = Flask(__name__)
 
 '''---------------From file.py import class----------------'''
 
-from static.py.read_file import Read					
-from static.py.extract_dates import Deadlines
+from static.py.read_file import ReadFile					
+from static.py.extract_dates import ExtractDates
 from static.py.output import Output
 
 
@@ -40,34 +40,15 @@ def contact():
 
 '''---------------Actions----------------'''
 
-@application.route('/upload_static_file', methods=['POST'])
-def upload_static_file():
-	 f = request.files['static_file'] #type: <class 'werkzeug.datastructures.FileStorage'>
-	 print(f.read())
-	 print(type(f))
-	 resp = {"success": True, "response": "file saved!"}
-	 return jsonify(resp), 200
- 
-@application.route('/upload/',  methods=['GET', 'POST'])
+@application.route('/upload', methods=['POST'])
 def upload():
-    # GET request
-    if request.method == 'GET':
-    	#f = request.files['static_file'] #type: <class 'werkzeug.datastructures.FileStorage'>
-    	#f = request.args.get('fileToLoad')
-    	f = request.files['new_file'] #type: <class 'werkzeug.datastructures.FileStorage'>
-    	print(f.read())
-    	print(type(f))
-    	resp = {"success": True, "response": "file saved!"}
-    	return jsonify(resp), 200
-	 
-	 	#textFromFile = request.args.get('textFromFile')
-    	#message = Read.read_func(f)
-    	#return message  # jsonify(message) 
-    # POST request
-    if request.method == 'POST':
-        print(request.get_json())  
-        return 'Sucesss', 200 
-        
+ 	f = request.files['new_file'] 
+ 	text = ReadFile.read_func(f)
+ 	dates = ExtractDates.dates_func(text)
+ 	#Output.output_func(dates)
+ 	message = dates + "<br/>" + text
+ 	return message
+	
 	
 '''
 how to run locally:
