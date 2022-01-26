@@ -7,7 +7,9 @@
 <body>
 <?php
 // include '/var/www/4001Y_Website/templates/index3.php';
-include './index3.php';
+echo "Before file included.<br>";
+include 'my_file.php';
+echo $my_string;
 ?>
 <!-- 
 <?php
