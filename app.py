@@ -9,7 +9,7 @@
 
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask.globals import request
-application = Flask(__name__)
+app = Flask(__name__)
 
 '''---------------From file.py import class----------------'''
 
@@ -20,26 +20,26 @@ from static.py.output import Output
 
 '''---------------Render pages----------------'''
 
-@application.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
 	return render_template('home.html')
 
-@application.route('/about/',  methods=['GET', 'POST'])
+@app.route('/about/',  methods=['GET', 'POST'])
 def about():
 	return render_template('about.html')
 	
-@application.route('/tutorial/',  methods=['GET', 'POST'])
+@app.route('/tutorial/',  methods=['GET', 'POST'])
 def tutorial():
 	return render_template('tutorial.html')
 	
-@application.route('/contact/',  methods=['GET', 'POST'])
+@app.route('/contact/',  methods=['GET', 'POST'])
 def contact():
 	return render_template('contact.html')
 
 
 '''---------------Actions----------------'''
 
-@application.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload():
  	f = request.files['new_file'] 
  	text = ReadFile.read_func(f)
@@ -50,7 +50,7 @@ def upload():
 	
 '''
 how to run locally:
-export FLASK_APP="application.py"
+export FLASK_APP="app.py"
 flask run
 http://127.0.0.1:5000/
 command shift R to reload static files
