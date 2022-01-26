@@ -51,7 +51,7 @@ class ReadFile():
 		return text
 	
 	def txt_file(f, directory):
-		f = open(directory + f.filename, "r")
+		f = open(directory + f.filename, "r", encoding="utf-8")
 		text = f.read()
 		return text
 
