@@ -13,9 +13,8 @@ app = Flask(__name__)
 
 '''---------------From file.py import class----------------'''
 
-from static.py.read_file import ReadFile					
-from static.py.extract_dates import ExtractDates
-
+from python.read_file import ReadFile					
+from python.extract_dates import ExtractDates
 
 '''---------------Render pages----------------'''
 
