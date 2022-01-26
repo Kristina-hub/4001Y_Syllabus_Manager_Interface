@@ -5,11 +5,26 @@
 <title>Dr. Western's Vet Clinic</title>
 </head>
 <body>
+<!-- 
 <?php
 // include '/var/www/4001Y_Website/templates/index3.php';
 echo 'Before file included.<br>';
 include 'my_file.php';
 echo $my_string;
+?>
+ -->
+Here are some useful variables:
+<ul>
+<?php
+echo '<li>' . $_SERVER['SERVER_NAME'] ;
+echo '<li>' . $_SERVER['REMOTE_ADDR'] ;
+echo '<li>' . $_SERVER['DOCUMENT_ROOT'] ;
+echo '<li>' . $_SERVER['SCRIPT_FILENAME'] ;
+echo '<li>' . $_SERVER['PHP_SELF'] ;
+?>
+</ul>
+<?php
+include 'my_file.php';
 ?>
 <!-- 
 <?php
