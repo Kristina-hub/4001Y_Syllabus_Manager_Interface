@@ -75,5 +75,5 @@ https://www.pexels.com/photo/flatlay-photo-of-weekly-planner-6690924/
 https://www.pexels.com/photo/close-up-shot-of-weekly-planner-6690930/
 
 https://www.svgrepo.com/svg/4336/calendar
-https://realfavicongenerator.net/
+https://realfavicongenerator.net/  
 '''
