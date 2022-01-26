@@ -6,7 +6,8 @@
 </head>
 <body>
 <?php
-include '/var/www/4001Y_Website/templates/index3.php';
+// include '/var/www/4001Y_Website/templates/index3.php';
+include './index3.php';
 ?>
 <!-- 
 <?php
