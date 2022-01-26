@@ -6,14 +6,21 @@
 </head>
 <body>
 <?php
+include 'index3.php';
+?>
+<!-- 
+<?php
 include 'connectdb.php';
 ?>
+ -->
 <h1>Welcome to the Western Vet Clinic</h1>
 <h2>Pets we look after</h2>
 <form action="getpets.php" method="post">
+<!-- 
 <?php
 include 'getdata.php'; 
 ?>
+ -->
 <input type="submit" value="Get Pet Names">
 </form>
 <p>
@@ -28,13 +35,17 @@ New Pet's Species: <br>
 <input type="radio" name="species" value="bird">Bird<br>
 <input type="file" name="file" id="file"><br>
 For which customer: <br>
+<!-- 
 <?php
 include 'getdata.php';
 ?>
+ -->
 <input type="submit" value="Add New Pet">
 </form>
+<!-- 
 <?php
 mysqli_close($connection);
 ?>
+ -->
 </body>
 </html>
