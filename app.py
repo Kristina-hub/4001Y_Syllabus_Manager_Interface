@@ -20,8 +20,7 @@ from python.extract_dates import ExtractDates
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-	return render_template('index1.php')
-	#return render_template('home.html')
+	return render_template('home.html')
 
 @app.route('/about/',  methods=['GET', 'POST'])
 def about():
