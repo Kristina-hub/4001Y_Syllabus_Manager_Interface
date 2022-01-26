@@ -47,7 +47,6 @@ def upload():
  	dates = ExtractDates.dates_func(text)
  	#Output.output_func(dates)
  	message = dates + "<br/>" + text
- 	#message = text
  	return message
 	
 '''
