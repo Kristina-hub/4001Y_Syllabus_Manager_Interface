@@ -15,7 +15,6 @@ app = Flask(__name__)
 
 from static.py.read_file import ReadFile					
 from static.py.extract_dates import ExtractDates
-from static.py.output import Output
 
 
 '''---------------Render pages----------------'''
@@ -42,9 +41,10 @@ def contact():
 @app.route('/upload', methods=['POST'])
 def upload():
  	f = request.files['new_file'] 
+ 	
  	text = ReadFile.read_func(f)
  	dates = ExtractDates.dates_func(text)
- 	#Output.output_func(dates)
+ 	
  	message = dates + "<br/>" + text
  	return message
 	
