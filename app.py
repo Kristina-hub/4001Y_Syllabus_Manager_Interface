@@ -47,8 +47,12 @@ def upload():
  	
 @app.route('/calendar', methods=['POST'])
 def calendar():
- 	return "hello from app.py"
-	
+ 	return "hello from calendar app.py"
+
+@app.route('/download', methods=['POST'])
+def download():
+ 	return "hello from download app.py"
+ 	
 '''
 how to run locally:
 export FLASK_APP="app.py"

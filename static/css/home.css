@@ -140,6 +140,7 @@ body {
     display: none;
 }
 
+
 .calendar-button {
     padding: 4px;
     display: block;
@@ -155,6 +156,24 @@ body {
 }
 
 .calendar-select {
+    display: none;
+}
+
+.download-button {
+    padding: 4px;
+    display: block;
+    float: left;
+	/* border: 1px solid black; */
+    /* border-radius: 5px; */
+}
+
+/* Change color on hover */
+.download-button:hover {
+  	background-color: black;
+  	color: white;
+}
+
+.download {
     display: none;
 }
 
