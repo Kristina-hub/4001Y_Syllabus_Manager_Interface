@@ -42,7 +42,7 @@ def upload():
  	f = request.files['new_file'] 
  	
  	text = ReadFile.read_func(f)
- 	dates = ExtractDates.dates_func(text)
+ 	dates = ExtractDates.dates_func(text, f.filename)
  	
  	message = dates + "<br/>" + text
  	return message
