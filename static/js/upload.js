@@ -26,7 +26,7 @@ $(document).ready(function() {
     		//var directory = path.dirname(path.basename(__dirname))
 
     		//document.getElementById('scroll').src = path + "../" + filename;
-    		document.getElementById('scroll').src = "/var/www/4001Y_Website/static/uploads/" + filename;
+    		//document.getElementById('scroll').src = "/var/www/4001Y_Website/static/uploads/" + filename;
      	};
 	}
 	
