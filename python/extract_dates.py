@@ -15,7 +15,7 @@ class ExtractDates():
 
 	def dates_func(text, filename):
 		print("Enter: deadlines_func.py")
-		csv_path = os.path.abspath(os.path.join(__file__ ,"../..")) + '/output/csv/extract_dates.csv'
+		csv_path = os.path.abspath(os.path.join(__file__ ,"../..")) + '/output/extract_dates.csv'
 		#csv_path = os.path.abspath(os.path.join(__file__ ,"../..")) + '/extract_dates.csv' #'/var/www/4001Y_Website/extract_dates.csv'
 		#csv_path = os.path.abspath(os.path.join(__file__ ,"../..")) + '/test/extract_dates.csv'
 		
