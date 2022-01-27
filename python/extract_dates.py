@@ -10,12 +10,13 @@
 import re
 import pandas as pd
 import os
+import pathlib
 		
 class ExtractDates():
 
 	def dates_func(text, filename):
 		print("Enter: deadlines_func.py")
-		csv_path = os.path.abspath(os.getcwd()) + 'output/csv/extract_dates.csv'
+		csv_path = pathlib.Path().resolve() + 'output/csv/extract_dates.csv'
 		
 		'''Type: Assignment/Test/Project/Final/Midterm'''
 		df = pd.DataFrame(columns = ['File', 'Course', 'Deliverable', 'Date', 'Type'])  
