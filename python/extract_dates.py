@@ -16,7 +16,9 @@ class ExtractDates():
 	def dates_func(text, filename):
 		print("Enter: deadlines_func.py")
 		csv_path = os.path.abspath(os.path.join(__file__ ,"../..")) + '/output/csv/extract_dates.csv'
-
+		#csv_path = os.path.abspath(os.path.join(__file__ ,"../..")) + '/extract_dates.csv' #'/var/www/4001Y_Website/extract_dates.csv'
+		#csv_path = os.path.abspath(os.path.join(__file__ ,"../..")) + '/test/extract_dates.csv'
+		
 		'''Type: Assignment/Test/Project/Final/Midterm'''
 		df = pd.DataFrame(columns = ['File', 'Course', 'Deliverable', 'Date', 'Type'])  
 		dates = []
@@ -30,8 +32,8 @@ class ExtractDates():
 		'''Month DD-DD, YYYY'''
 		'''Month DD'''
 		'''Month D'''
-		#dates_list = re.findall(r'((Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t)?(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:Ð\d{1,2})?(?:,)?(?:\s+(\d{4}))?)', text)
-		#[dates.append(x[0]) for x in dates_list]
+		dates_list = re.findall(r'((Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t)?(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:â€“\d{1,2})?(?:,)?(?:\s+(\d{4}))?)', text)
+		[dates.append(x[0]) for x in dates_list]
 
 		'''MM/DD'''
 		'''MM/D'''
@@ -44,8 +46,6 @@ class ExtractDates():
 		'''DD/MM/YY'''
 		'''DD/MM/YYYY'''
 		dates += re.findall(r'\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})', text)
-		
-		'''DD-Month'''
 
 		for date in dates:
 			row = {'File':filename, 'Course':'null', 'Deliverable':'null', 'Date':date, 'Type':'null'}
