@@ -20,12 +20,12 @@ $(document).ready(function() {
     		document.getElementById("text").innerHTML = oReq.response; 
     		
     		var path = document.location.pathname;
-    		console.log(path)
-			
-			var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));   //"../static/uploads/"
-			console.log(directory)
+			//var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));   //"../static/uploads/"
     		
-    		document.getElementById('scroll').src = directory + filename;
+    		//var path = require("path")
+    		//var directory = path.dirname(path.basename(__dirname))
+
+    		document.getElementById('scroll').src = path + "../" + filename;
      	};
 	}
 	
