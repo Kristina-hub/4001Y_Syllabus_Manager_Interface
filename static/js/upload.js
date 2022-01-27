@@ -24,6 +24,7 @@ $(document).ready(function() {
     		
     		//var path = require("path")
     		//var directory = path.dirname(path.basename(__dirname))
+    		// https://stackoverflow.com/questions/42956127/get-parent-directory-name-in-node-js/42956762
 
     		//document.getElementById('scroll').src = path + "../" + filename;
     		//document.getElementById('scroll').src = "/var/www/4001Y_Website/static/uploads/" + filename;
