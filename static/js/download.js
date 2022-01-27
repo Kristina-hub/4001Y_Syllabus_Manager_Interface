@@ -22,10 +22,10 @@ $(document).ready(function() {
 	}
 	
     $(".download").on('change', function() {
-    	document.getElementById("right").style.opacity = "0.5";
     	document.getElementById('scroll').style.visibility = "hidden"; 
     	document.getElementById("text2").innerHTML = "";
     	document.getElementById("text").innerHTML = "Loading...";
+    	document.getElementById("right").style.opacity = "0.5";
     	loadFile(this.form, this.files[0].name);
     });
     
