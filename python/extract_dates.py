@@ -46,6 +46,13 @@ class ExtractDates():
 		'''DD/MM/YY'''
 		'''DD/MM/YYYY'''
 		dates += re.findall(r'\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})', text)
+		
+		'''D-Month'''
+		'''DD-Month'''
+		'''D Month'''
+		'''DD Month'''
+		dates_list += re.findall(r'((\d{1,2})(-|\s)(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t)?(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?))', text)
+		[dates.append(x[0]) for x in dates_list]
 
 		for date in dates:
 			row = {'File':filename, 'Course':'null', 'Deliverable':'null', 'Date':date, 'Type':'null'}
