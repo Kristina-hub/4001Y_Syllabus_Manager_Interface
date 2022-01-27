@@ -14,16 +14,16 @@ $(document).ready(function() {
 	function loadFile(form, filename) {    	
  		const formData = new FormData(form); 		
  		var oReq = new XMLHttpRequest(); 		
- 		oReq.open("POST", "upload", true); 		
+ 		oReq.open("POST", "calendar", true); 		
  		oReq.send(formData);
  		oReq.onload = function(oEvent) {
-    		document.getElementById("text").innerHTML = oReq.response;
+    		document.getElementById("text").innerHTML = "Hello from calendar.js"; //oReq.response
      	};
 	}
 	
     $(".calendar-select").on('change', function() {
     	document.getElementById('scroll').style.visibility = "hidden"; 
-    	document.getElementById("text2").style.visibility = "hidden";
+    	document.getElementById("text2").innerHTML = "";
     	document.getElementById("text").innerHTML = "Loading...";
     	loadFile(this.form, this.files[0].name);
     });
