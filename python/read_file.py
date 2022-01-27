@@ -63,9 +63,8 @@ class ReadFile():
 		print(f.content_type)
 		text = "Error: unable to read file"
 		
-		#temp_dir = tempfile.TemporaryDirectory()						#creates a temp directory
-		#directory = temp_dir.name
-		directory = os.getcwd() + "/static/uploads/" 
+		temp_dir = tempfile.TemporaryDirectory()						#creates a temp directory
+		directory = temp_dir.name
 		f.save(directory + f.filename)
 			
 		if (f.filename.split('.')[1] == "txt"):
@@ -79,7 +78,7 @@ class ReadFile():
 		if (text == ""): 
 			text = ReadFile.image_pdf(f, directory) 					#image PDFs
 		
-		#temp_dir.cleanup()
+		temp_dir.cleanup()												#remove directory
 		print("Exit: read_file.py")
 		return text
 		
