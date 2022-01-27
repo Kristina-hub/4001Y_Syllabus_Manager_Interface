@@ -140,6 +140,23 @@ body {
     display: none;
 }
 
+.calendar-button {
+    padding: 4px;
+    display: block;
+    float: left;
+	/* border: 1px solid black; */
+    /* border-radius: 5px; */
+}
+
+/* Change color on hover */
+.calendar-button:hover {
+  	background-color: black;
+  	color: white;
+}
+
+.calendar-select {
+    display: none;
+}
 
 
 
