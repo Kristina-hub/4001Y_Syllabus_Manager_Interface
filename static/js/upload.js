@@ -18,16 +18,7 @@ $(document).ready(function() {
  		oReq.send(formData);
  		oReq.onload = function(oEvent) {
     		document.getElementById("text").innerHTML = oReq.response; 
-    		
-    		var path = document.location.pathname;
-			//var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));   //"../static/uploads/"
-    		
-    		//var path = require("path")
-    		//var directory = path.dirname(path.basename(__dirname))
-    		// https://stackoverflow.com/questions/42956127/get-parent-directory-name-in-node-js/42956762
-
-    		//document.getElementById('scroll').src = path + "../" + filename;
-    		//document.getElementById('scroll').src = "/var/www/4001Y_Website/static/uploads/" + filename;
+    		document.getElementById('scroll').src = "../static/uploads/" + filename; //src="../static/uploads/small_file.txt"
      	};
 	}
 	
