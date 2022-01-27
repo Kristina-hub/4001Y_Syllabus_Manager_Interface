@@ -44,6 +44,8 @@ class ExtractDates():
 		'''DD/MM/YY'''
 		'''DD/MM/YYYY'''
 		dates += re.findall(r'\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})', text)
+		
+		'''DD-Month'''
 
 		for date in dates:
 			row = {'File':filename, 'Course':'null', 'Deliverable':'null', 'Date':date, 'Type':'null'}

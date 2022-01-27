@@ -18,6 +18,10 @@ $(document).ready(function() {
  		oReq.send(formData);
  		oReq.onload = function(oEvent) {
     		document.getElementById("text").innerHTML = oReq.response; 
+    		
+    		var path = document.location.pathname;
+			var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));   //"../static/uploads/"
+    		document.getElementById('scroll').src = directory + filename;
      	};
 	}
 	
@@ -27,6 +31,7 @@ $(document).ready(function() {
     	document.getElementById("whitebox").style.visibility = "visible";
     	document.getElementById("text").innerHTML = "Loading..."; 
     	loadFile(this.form, this.files[0].name);
+    	document.getElementById("text2").innerHTML = this.files[0].name; 
     });
     
     $(".upload-button").on('click', function() {
