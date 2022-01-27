@@ -26,7 +26,7 @@ $(document).ready(function() {
     	document.getElementById("text2").innerHTML = "";
     	document.getElementById("text").innerHTML = "Loading...";
     	document.getElementById("middle").style.opacity = "0.5";
-    	loadFile(this.form, this.files[0].name);
+//     	loadFile(this.form, this.files[0].name);
     });
     
     $(".calendar-button").on('click', function() {
