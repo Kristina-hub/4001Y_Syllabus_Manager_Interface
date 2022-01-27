@@ -17,7 +17,7 @@ $(document).ready(function() {
  		oReq.open("POST", "calendar", true); 		
  		oReq.send(formData);
  		oReq.onload = function(oEvent) {
-    		document.getElementById("text").innerHTML = "Hello from calendar.js"; //oReq.response
+    		document.getElementById("text").innerHTML = oReq.response;
      	};
 	}
 	
