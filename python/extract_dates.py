@@ -30,7 +30,7 @@ class ExtractDates():
 		'''Month DD-DD, YYYY'''
 		'''Month DD'''
 		'''Month D'''
-		dates_list = re.findall(r'((Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t)?(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:â€“\d{1,2})?(?:,)?(?:\s+(\d{4}))?)', text)
+		dates_list = re.findall(r'((Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t)?(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:Ð\d{1,2})?(?:,)?(?:\s+(\d{4}))?)', text)
 		[dates.append(x[0]) for x in dates_list]
 
 		'''MM/DD'''
