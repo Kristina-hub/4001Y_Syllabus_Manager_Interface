@@ -18,7 +18,11 @@ $(document).ready(function() {
  		oReq.send(formData);
  		oReq.onload = function(oEvent) {
     		document.getElementById("text").innerHTML = oReq.response; 
-    		document.getElementById('scroll').src = "../static/uploads/" + filename; //src="../static/uploads/small_file.txt"
+    		if(filename.split('.').pop() == "pdf" | filename.split('.').pop() == "txt") {
+    			document.getElementById('scroll').src = "../static/uploads/" + filename; //src="../static/uploads/small_file.txt"
+    		} else {
+    			document.getElementById('scroll').style.visibility = "hidden";
+    		}
      	};
 	}
 	
