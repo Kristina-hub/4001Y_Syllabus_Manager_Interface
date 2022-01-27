@@ -52,19 +52,39 @@
 			</form>
 			
 			<div class="middle" id="middle" style="cursor:pointer;">
-				<div class="calendar-button">
+				<div class="calendar-button" onclick="openForm()">
 					<img src="../static/img/book-2.jpg">
 					<h2>2. Choose a calendar</h2>
 					<p>Supported calendars: iOS Calendar, Google, Outlook</p>
 				</div>
 			</div>
 			
+<!-- 
 			<form>
-				<input class="calendar-select"  type="text" name="firstname" value="Mickey">
-				<input class="calendar-select" type="button" id="calendar-select" value="Google Calendar"/> 
-<!-- 				<input class="calendar-select" type="button" id="calendar-select" value="Outlook Calendar"/>  -->
-<!-- 				<input class="calendar-select" type="button" id="calendar-select" value="Yahoo Calendar"/>  -->
+			    <h1>Login</h1>
+    			<label for="email"><b>Email</b></label>
+<!~~ 				<input class="calendar-select"  type="text" name="firstname" value="Mickey"> ~~>
+<!~~ 				<input class="calendar-select" type="button" id="calendar-select" value="Google Calendar"/>  ~~>
+<!~~ 				<input class="calendar-select" type="button" id="calendar-select" value="Outlook Calendar"/>  ~~>
+<!~~ 				<input class="calendar-select" type="button" id="calendar-select" value="Yahoo Calendar"/>  ~~>
 			</form>
+ -->
+			
+			<div class="form-popup" id="myForm">
+			  <form class="form-container">
+				<h1>Login</h1>
+
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="Enter Email" name="email" required>
+
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+
+				<button type="submit" class="btn">Login</button>
+				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			  </form>
+			</div>
+			
 			
 			<div class="rightside" id="right" style="cursor:pointer;">
 				<div class="download-button">
