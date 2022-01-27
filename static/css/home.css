@@ -179,6 +179,12 @@ body {
 
 
 
+.form-popup {
+	z-index: 1000; // or any value higher than your other elements
+	position: absolute;
+}
+
+
 
 
 
