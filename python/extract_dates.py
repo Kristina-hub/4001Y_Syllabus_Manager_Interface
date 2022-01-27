@@ -16,10 +16,8 @@ class ExtractDates():
 		print("Enter: deadlines_func.py")
 		csv_path = './output/csv/extract_dates.csv'
 		
-		# Type: Assignment/Test/Project/Final/Midterm
+		'''Type: Assignment/Test/Project/Final/Midterm'''
 		df = pd.DataFrame(columns = ['File', 'Course', 'Deliverable', 'Date', 'Type'])  
-		
-		message = "Dates:<br/>"
 		dates = []
 	
 		'''YYYY-MM-DD'''
@@ -49,14 +47,13 @@ class ExtractDates():
 		for date in dates:
 			row = {'File':filename, 'Course':'null', 'Deliverable':'null', 'Date':date, 'Type':'null'}
 			df = df.append(row, ignore_index=True)
-			message += date
-			message += "<br/>"
 
 		print(df)
 		df.to_csv(csv_path, index=False)
 		
 		print(dates)
 		print("Exit: deadlines_func.py")
+		message = df.to_html()
 		return message
 
 
