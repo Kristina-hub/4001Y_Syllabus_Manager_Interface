@@ -20,7 +20,11 @@ $(document).ready(function() {
     		document.getElementById("text").innerHTML = oReq.response; 
     		
     		var path = document.location.pathname;
+    		console.log(path)
+			
 			var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));   //"../static/uploads/"
+			console.log(directory)
+    		
     		document.getElementById('scroll').src = directory + filename;
      	};
 	}
