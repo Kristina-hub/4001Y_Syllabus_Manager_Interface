@@ -59,30 +59,17 @@
 				</div>
 			</div>
 			
-<!-- 
-			<form>
-			    <h1>Login</h1>
-    			<label for="email"><b>Email</b></label>
-<!~~ 				<input class="calendar-select"  type="text" name="firstname" value="Mickey"> ~~>
-<!~~ 				<input class="calendar-select" type="button" id="calendar-select" value="Google Calendar"/>  ~~>
-<!~~ 				<input class="calendar-select" type="button" id="calendar-select" value="Outlook Calendar"/>  ~~>
-<!~~ 				<input class="calendar-select" type="button" id="calendar-select" value="Yahoo Calendar"/>  ~~>
-			</form>
- -->
 			
-			<div class="form-popup" id="myForm">
-			  <form class="form-container">
-				<h1>Login</h1>
-
-				<label for="email"><b>Email</b></label>
-				<input type="text" placeholder="Enter Email" name="email" required>
-
-				<label for="psw"><b>Password</b></label>
-				<input type="password" placeholder="Enter Password" name="psw" required>
-
-				<button type="submit" class="btn">Login</button>
-				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-			  </form>
+			
+			<div id="modalOne" class="modal">
+			  <div class="modal-content">
+				<div class="contact-form">
+				  <a class="close">&times;</a>
+					<form action="/">
+						<h2>Contact Us</h2>
+					</form>
+				</div>
+			  </div>
 			</div>
 			
 			
@@ -99,6 +86,10 @@
 			</form>
 			
 		</div>
+		
+		<button class="button" data-modal="modalOne">Contact Us</button>
+		
+		
 
 		<div class="row">
 			<div class="full">
