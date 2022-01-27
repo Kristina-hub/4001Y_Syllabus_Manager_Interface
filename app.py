@@ -41,11 +41,13 @@ def contact():
 @app.route('/upload', methods=['POST'])
 def upload():
  	f = request.files['new_file'] 
- 	
  	text = ReadFile.read_func(f) 
  	message = ExtractDates.dates_func(text, f.filename)
- 	
  	return message
+ 	
+@app.route('/calendar', methods=['POST'])
+def calendar():
+ 	return "hello from app.py"
 	
 '''
 how to run locally:

@@ -38,6 +38,7 @@ $(document).ready(function() {
     $(".upload-button").on('click', function() {
     	$(".file-upload").click();
     });
+    
 });
 
 
