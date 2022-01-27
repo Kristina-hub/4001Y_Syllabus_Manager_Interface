@@ -7,7 +7,6 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
-#pip list | grep -F docx
 from werkzeug.datastructures import FileStorage		#pip install werkzeug
 import PyPDF2										#pip install PyPDF2
 import tempfile
@@ -15,6 +14,7 @@ from PIL import Image								#pip install Pillow
 import pytesseract									#pip install pytesseract
 from pdf2image import convert_from_path				#pip install pdf2image
 import docx											#pip install docx  pip install python-docx
+import os 
 
 class ReadFile():
 
@@ -63,20 +63,23 @@ class ReadFile():
 		print(f.content_type)
 		text = "Error: unable to read file"
 		
-		with tempfile.TemporaryDirectory() as directory:				#creates a temp directory and then deletes 
-			f.save(directory + f.filename)
+		#temp_dir = tempfile.TemporaryDirectory()						#creates a temp directory
+		#directory = temp_dir.name
+		directory = os.getcwd() + "/static/uploads/" 
+		f.save(directory + f.filename)
 			
-			if (f.filename.split('.')[1] == "txt"):
-				text = ReadFile.txt_file(f, directory)
+		if (f.filename.split('.')[1] == "txt"):
+			text = ReadFile.txt_file(f, directory)
 		
-			elif (f.filename.split('.')[1] == "docx"): 
-				text = ReadFile.docx_file(f, directory)
+		elif (f.filename.split('.')[1] == "docx"): 
+			text = ReadFile.docx_file(f, directory)
 			
-			elif (f.filename.split('.')[1] == "pdf"): 
-				text = ReadFile.text_pdf(f, directory) 						#text PDFs
-				if (text == ""): 
-					text = ReadFile.image_pdf(f, directory) 				#image PDFs
-					
+		elif (f.filename.split('.')[1] == "pdf"): 
+			text = ReadFile.text_pdf(f, directory) 						#text PDFs
+		if (text == ""): 
+			text = ReadFile.image_pdf(f, directory) 					#image PDFs
+		
+		#temp_dir.cleanup()
 		print("Exit: read_file.py")
 		return text
 		

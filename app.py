@@ -7,6 +7,7 @@
 #       Created on: 2022-01-18            #
 # --------------------------------------- #
 
+import os
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask.globals import request
 app = Flask(__name__)
@@ -41,11 +42,13 @@ def contact():
 def upload():
  	f = request.files['new_file'] 
  	
- 	text = ReadFile.read_func(f)
+ 	text = ReadFile.read_func(f) #arr = [temp_dir, path, text]
  	message = ExtractDates.dates_func(text, f.filename)
-
- 	#message = text
+ 	
  	return message
+ 	
+#  	text = ReadFile.read_func(f)
+#  	message = ExtractDates.dates_func(text, f.filename)
 	
 '''
 how to run locally:

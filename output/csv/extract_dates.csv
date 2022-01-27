@@ -1,10 +1,12 @@
 File,Course,Deliverable,Date,Type
-file.txt,null,null,2021-01-04,null
-file.txt,null,null,2022-05-03,null
-file.txt,null,null,"September 8, 2021",null
-file.txt,null,null,"November 1–7, 2021",null
-file.txt,null,null,"December 8, 2021",null
-file.txt,null,null,Nov 12,null
-file.txt,null,null,10/6,null
-file.txt,null,null,11/8,null
-file.txt,null,null,12/8,null
+BIO_1001A_2019.pdf,null,null,"September
+ 
+1",null
+BIO_1001A_2019.pdf,null,null,"September
+ 
+2",null
+BIO_1001A_2019.pdf,null,null,October 6,null
+BIO_1001A_2019.pdf,null,null,"November 
+1",null
+BIO_1001A_2019.pdf,null,null,"November 
+11",null
