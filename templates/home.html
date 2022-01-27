@@ -81,13 +81,17 @@
 		
 		
 		
-		<button class="trigger" onclick="toggleModal()">Click here to trigger the modal!</button>
-		<div class="modal">
-			<div class="modal-content">
-				<span class="close-button">&times;</span>
-				<h1>Hello, I am a modal!</h1>
-			</div>
-		</div>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
+  
+    <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
 		
 		
 		
