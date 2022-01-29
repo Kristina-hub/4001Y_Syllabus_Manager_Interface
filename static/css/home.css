@@ -182,7 +182,18 @@ body {
 
 
 
+.rows {
+  	display: flex;
+}
 
+.columns {
+  	flex: 33.33%;
+  	padding: 5px;
+}
+
+.columns:hover {
+  	background-color: grey;
+}
 
 
 

@@ -65,9 +65,19 @@
 				  <div class="w3-container">
 					<span onclick="closeCalendar()" class="w3-button w3-display-topright">&times;</span>
 					<p>Select a calendar:</p>
-					<img src="../static/img/google_calendar.jpg">
-					<img src="../static/img/outlook_calendar.jpg">
-					<img src="../static/img/yahoo_calendar.jpg">
+					
+					<div class="rows">
+					  <div class="columns" onclick="selectCalendar()">
+						<img src="../static/img/google_calendar.png" style="width:100%">
+					  </div>
+					  <div class="columns" onclick="selectCalendar()">
+						<img src="../static/img/outlook_calendar.png" style="width:100%">
+					  </div>
+					  <div class="columns" onclick="selectCalendar()">
+						<img src="../static/img/yahoo_calendar.png" style="width:100%">
+					  </div>
+					</div>
+					
 				  </div>
 				</div>
 			</div>

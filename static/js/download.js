@@ -9,11 +9,14 @@
 
 
 function openDownload() {
-  document.getElementById('download').style.display='block';
+	document.getElementById('download').style.display='block';
+    document.getElementById("middle").style.opacity = "0.5";
 }
 
 function closeDownload() {
-  document.getElementById('download').style.display='none';
+  	document.getElementById('download').style.display='none';
 }
 
-
+function selectDownload() {
+  	document.getElementById('download').style.display='none';
+}
