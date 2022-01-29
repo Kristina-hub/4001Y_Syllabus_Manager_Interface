@@ -51,53 +51,44 @@
 			<form enctype = "multipart/form-data">
 				<input class="file-upload" type="file" id="input-file" name="new_file"/> 
 			</form>
-			
+
 			<div class="middle" id="middle" style="cursor:pointer;">
-				<div class="calendar-button" onclick="openForm()">
+				<div class="calendar-button" onclick="openCalendar()">
 					<img src="../static/img/book-2.jpg">
 					<h2>2. Choose a calendar</h2>
 					<p>Supported calendars: iOS Calendar, Google, Outlook</p>
 				</div>
 			</div>
 			
-			
-			
-
-			
+			<div id="calendar" class="w3-modal">
+				<div class="w3-modal-content">
+				  <div class="w3-container">
+					<span onclick="closeCalendar()" class="w3-button w3-display-topright">&times;</span>
+					<p>Select a calendar:</p>
+				  </div>
+				</div>
+			</div>
 			
 			<div class="rightside" id="right" style="cursor:pointer;">
-				<div class="download-button">
+				<div class="download-button" onclick="openDownload()">
 					<img src="../static/img/book-3.jpg">
 					<h2>3. Download your deadlines</h2>
 					<p>Click on the .ics file to input your deadlines</p>
 				</div>
 			</div>
 			
-			<form enctype = "multipart/form-data">
-				<input class="download" type="file" id="download" name="new_file"/> 
-			</form>
-			
+			<div id="download" class="w3-modal">
+				<div class="w3-modal-content">
+				  <div class="w3-container">
+					<span onclick="closeDownload()" class="w3-button w3-display-topright">&times;</span>
+					<p>Downloading your ics file...</p>
+				  </div>
+				</div>
+			</div>
 		</div>
 		
-		
-		
-		
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
-  
-    <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <p>Some text. Some text. Some text.</p>
-        <p>Some text. Some text. Some text.</p>
-      </div>
-    </div>
-  </div>
-		
-		
-		
-		
 
+		
 		<div class="row">
 			<div class="full">
 				<img src="../static/img/calendar.jpg" id="full"> <!-- style="opacity: 0.5" -->
