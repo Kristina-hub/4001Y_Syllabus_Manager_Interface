@@ -54,7 +54,6 @@ class ExtractDates:
 
 		'''YYYY-MM-DD'''
 		dates_list = re.findall(r'(\w+)?(?:[ ,:\n]?[ ,:\n]?[ ,:\n]?)(\w+)?(?:[ ,:\n]?[ ,:\n]?[ ,:\n]?)(\d{4}-\d{2}-\d{2})', text)
-		# Exclude day names: ((?!Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday\b)\b\S+ )?
 		for x in dates_list:
 			context.append(x[0] + ' ' + x[1])
 			dates.append(x[2])
@@ -83,7 +82,7 @@ class ExtractDates:
 		'''MM/DD/YYYY'''
 		'''DD/MM/YY'''
 		'''DD/MM/YYYY'''
-		dates_list = re.findall(r'(\w+)?(?:[ ,:\n][ ,:\n][ ,:\n])?(\w+)?(?:[ ,:\n][ ,:\n][ ,:\n])?(\d{1,2}\/\d{1,2}\/(\d{4}|\d{2}))', text)
+		dates_list = re.findall(r'(\w+)?(?:[ ,:\n]?[ ,:\n]?[ ,:\n]?)(\w+)?(?:[ ,:\n]?[ ,:\n]?[ ,:\n]?)(\d{1,2}\/\d{1,2}\/(\d{4}|\d{2}))', text)
 		for x in dates_list:
 			context.append(x[0] + ' ' + x[1])
 			dates.append(x[2])
