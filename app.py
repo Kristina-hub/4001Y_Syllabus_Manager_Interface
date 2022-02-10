@@ -40,17 +40,20 @@ def contact():
 
 @app.route('/upload', methods=['POST'])
 def upload():
- 	f = request.files['new_file'] 
- 	text = ReadFile.read_func(f) 
- 	message = ExtractDates.dates_func(text, f.filename)
- 	return message
- 	
+	f = request.files['new_file']
+	text = ReadFile.read_func(f)
+	df = ExtractDates.dates_func(text, f.filename)
+	### Save df as global variable to be called in 'download'?
+	message = df.style.format({c: '<input name="{}" value="{{}}" />'.format(c) for c in df.columns}).render()
+	return message
+
 @app.route('/calendar', methods=['POST'])
 def calendar():
  	return "hello from calendar app.py"
 
 @app.route('/download', methods=['POST'])
 def download():
+	### CALL ICS
  	return "hello from download app.py"
  	
 '''

@@ -12,7 +12,6 @@ from dateutil.parser import parse
 from datetime import datetime
 import pandas as pd
 
-
 class ExtractDates:
 
 	def dates_func(text, filename):
@@ -109,9 +108,7 @@ class ExtractDates:
 
 		print(dates)
 		print("Exit: deadlines_func.py")
-		message = df.style.format({c: '<input name="{}" value="{{}}" />'.format(c) for c in df.columns}).render()
-
-		return message
+		return df
 
 
 
