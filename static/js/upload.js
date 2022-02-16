@@ -30,6 +30,7 @@ $(document).ready(function() {
     	document.getElementById("left").style.opacity = "0.5";
     	document.getElementById("full").style.opacity = "0.5";
     	document.getElementById("whitebox").style.visibility = "visible";
+		document.getElementById("submit-button").style.visibility = "visible";
     	document.getElementById("text").innerHTML = "Loading..."; 
     	loadFile(this.form, this.files[0].name);
     	document.getElementById("text2").innerHTML = this.files[0].name; 

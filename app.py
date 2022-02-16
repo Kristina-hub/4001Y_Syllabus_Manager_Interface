@@ -44,8 +44,13 @@ def upload():
 	text = ReadFile.read_func(f)
 	df = ExtractDates.dates_func(text, f.filename)
 	### Save df as global variable to be called in 'download'?
-	message = df.style.format({c: '<input name="{}" value="{{}}" />'.format(c) for c in df.columns}).render()
+	message = df.style.format({c: '<input id="table" name="table" value="{{}}" />'.format(c) for c in df.columns}).render()
 	return message
+		
+
+@app.route('/submit', methods=['POST'])
+def submit():
+	return "hello from submit app.py"
 
 @app.route('/calendar', methods=['POST'])
 def calendar():
