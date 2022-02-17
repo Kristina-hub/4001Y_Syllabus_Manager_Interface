@@ -13,11 +13,15 @@ $(document).ready(function() {
 
 	function addRow() {    	
 		var table = document.getElementById("table");
-		var row = table.insertRow(0);
-		row.insertCell(0);
-		row.insertCell(1);
-		row.insertCell(2);
-		row.insertCell(3);
+		var row = table.insertRow();
+		var cell = row.insertCell(0);
+		cell.innerHTML = "";
+		cell = row.insertCell(1);
+		cell.innerHTML = "";
+		cell = row.insertCell(2);
+		cell.innerHTML = "";
+		cell = row.insertCell(3);
+		cell.innerHTML = "";
 	}
 
 	$(".submit-button").on('click', function() {
