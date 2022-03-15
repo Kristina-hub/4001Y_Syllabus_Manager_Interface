@@ -14,11 +14,10 @@ import pandas as pd
 
 class ExtractDates:
 
-	def dates_func(text, filename):
+	def dates_func(text, filename, df):
 		print("Enter: deadlines_func.py")
 
 		'''Type: Assignment/Test/Project/Final/Midterm'''
-		df = pd.DataFrame(columns=['File', 'Course', 'Deliverable', 'Date'])
 		context = []
 		dates = []
 

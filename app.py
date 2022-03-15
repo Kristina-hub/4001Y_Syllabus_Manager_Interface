@@ -8,6 +8,7 @@
 # --------------------------------------- #
 
 import os
+import pandas as pd
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask.globals import request
 app = Flask(__name__)
@@ -16,6 +17,10 @@ app = Flask(__name__)
 
 from python.read_file import ReadFile
 from python.extract_dates import ExtractDates
+
+'''---------------Create global dataframe----------------'''
+
+df = pd.DataFrame(columns=['File', 'Course', 'Deliverable', 'Date'])
 
 '''---------------Render pages----------------'''
 
@@ -35,18 +40,25 @@ def tutorial():
 def contact():
 	return render_template('contact.html')
 
-
 '''---------------Actions----------------'''
 
 @app.route('/upload', methods=['POST'])
 def upload():
 	f = request.files['new_file']
 	text = ReadFile.read_func(f)
-	df = ExtractDates.dates_func(text, f.filename)
+	global df
+	df = ExtractDates.dates_func(text, f.filename, df)
 	### Save df as global variable to be called in 'download'?
+	### wrap table in form and POST? 
 	message = df.style.format({c: '<input id="table" name="table" value="{{}}" />'.format(c) for c in df.columns}).render()
 	return message
 		
+@app.route('/table', methods=['POST'])
+def table():
+	global df
+	df = df.append({'File':None, 'Course':None, 'Deliverable':None, 'Date':None})
+	message = df.style.format({c: '<input id="table" name="table" value="{{}}" />'.format(c) for c in df.columns}).render()
+	return message
 
 @app.route('/submit', methods=['POST'])
 def submit():

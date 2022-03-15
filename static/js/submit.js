@@ -11,7 +11,7 @@
 
 $(document).ready(function() {
 
-	function submitTable() {    	
+	function submitTable() {    			
  		window.alert("Submit button is working!");
 	}
 
@@ -20,5 +20,3 @@ $(document).ready(function() {
     });
     
 });
-
-

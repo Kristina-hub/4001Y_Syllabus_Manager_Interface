@@ -12,7 +12,7 @@
 $(document).ready(function() {
 
 	function addRow() {    	
-		var table = document.getElementById("table");
+		/*var table = document.getElementById("table");
 		var row = table.insertRow();
 		var cell = row.insertCell(0);
 		cell.innerHTML = "";
@@ -21,13 +21,19 @@ $(document).ready(function() {
 		cell = row.insertCell(2);
 		cell.innerHTML = "";
 		cell = row.insertCell(3);
-		cell.innerHTML = "";
+		cell.innerHTML = "";*/
+		window.alert("Add row button is working!");
+		const formData = new FormData(form); 		
+ 		var oReq = new XMLHttpRequest(); 		
+ 		oReq.open("POST", "table", true); 		
+ 		oReq.send(formData);
+ 		oReq.onload = function(oEvent) {
+    		document.getElementById("text").innerHTML = oReq.response; 
+		}
 	}
 
-	$(".submit-button").on('click', function() {
-    	addRow();
+	$(".row-button").on('click', function() {
+    	addRow(this.form);
     });
     
 });
-
-
